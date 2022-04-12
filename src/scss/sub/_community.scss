@@ -1,0 +1,32 @@
+.mvBox {
+	width: 100%;
+
+	.mv {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+
+		article {
+			width: calc(25% - 20px);
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			.pic {
+				width: 100%;
+				height: 100%;
+
+				img {
+					width: 100%;
+				}
+			}
+
+			h2 {
+				font: 500 14px/1.2 'Montserrat';
+				color: #757575;
+			}
+		}
+	}
+}

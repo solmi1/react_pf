@@ -1,13 +1,7 @@
-import React from 'react';
+import Layout from '../common/Layout';
 
 function Board() {
-	return (
-		<section className='content board'>
-			<div className='inner'>
-				<h1>Board</h1>
-			</div>
-		</section>
-	);
+	return <Layout name={'BOARD'}></Layout>;
 }
 
 export default Board;

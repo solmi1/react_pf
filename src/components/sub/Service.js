@@ -1,13 +1,7 @@
-import React from 'react';
+import Layout from '../common/Layout';
 
 function Service() {
-	return (
-		<section className='content service'>
-			<div className='inner'>
-				<h1>Service</h1>
-			</div>
-		</section>
-	);
+	return <Layout name={'SERVICE'}></Layout>;
 }
 
 export default Service;

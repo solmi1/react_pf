@@ -1,13 +1,9 @@
-import React from 'react';
+import Layout from '../common/Layout';
+
+const path = process.env.PUBLIC_URL;
 
 function Portfolio() {
-	return (
-		<section className='content portfolio'>
-			<div className='inner'>
-				<h1>Portfolio</h1>
-			</div>
-		</section>
-	);
+	return <Layout name={'PORTFOLIO'}></Layout>;
 }
 
 export default Portfolio;

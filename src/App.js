@@ -1,6 +1,6 @@
 import { Route, Switch } from 'react-router-dom';
-
 import './scss/style.scss';
+
 //common 컴포넌트
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
