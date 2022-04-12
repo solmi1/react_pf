@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "name": "Choi Jun",
+      "position": "CEO & Web Designer",
+      "pic": "member1.jpg"
+    },
+    {
+      "name": "Lee Sa",
+      "position": "Designer",
+      "pic": "member2.jpg"
+    },
+    {
+      "name": "Hanyong",
+      "position": "Front-End Dev",
+      "pic": "member3.jpg"
+    }
+  ]
+}
