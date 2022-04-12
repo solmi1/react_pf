@@ -24,7 +24,6 @@ function App() {
 					{/* 메인에만 적용되는 header */}
 					<Header type={'main'} />
 					<Visual />
-					<Content />
 				</Route>
 
 				<Route path='/'>
