@@ -28,7 +28,7 @@ function Header(props) {
 						<NavLink to='/portfolio'>PORTFOLIO</NavLink>
 					</li>
 					<li>
-						<NavLink to='/community'>COMMUNITY</NavLink>
+						<NavLink to='/youtube'>YOUTUBE</NavLink>
 					</li>
 					<li>
 						<NavLink to='/board'>BOARD</NavLink>

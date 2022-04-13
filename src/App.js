@@ -11,7 +11,7 @@ import Visual from './components/main/Visual';
 //sub 컴포넌트
 import About from './components/sub/About';
 import Board from './components/sub/Board';
-import Community from './components/sub/Community';
+import Youtube from './components/sub/Youtube';
 import Contact from './components/sub/Contact';
 import Portfolio from './components/sub/Portfolio';
 import Service from './components/sub/Service';
@@ -34,7 +34,7 @@ function App() {
 
 			<Route path='/about' component={About} />
 			<Route path='/board' component={Board} />
-			<Route path='/community' component={Community} />
+			<Route path='/youtube' component={Youtube} />
 			<Route path='/contact' component={Contact} />
 			<Route path='/portfolio' component={Portfolio} />
 			<Route path='/service' component={Service} />
