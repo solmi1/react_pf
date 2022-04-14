@@ -14,7 +14,7 @@
 				width: 70%;
 
 				article {
-					margin-bottom: 80px;
+					margin-bottom: 60px;
 					box-shadow: 2px 5px 15px #eee;
 
 					.imgBox {
@@ -66,6 +66,7 @@
 									padding: 0;
 									text-align: center;
 									font: 11px/1.8 'Montserrat';
+									white-space: pre-wrap;
 
 									strong {
 										font: 600 24px/1 'Montserrat';
@@ -75,7 +76,7 @@
 									&:last-child {
 										font: 500 18px/1 'Montserrat';
 										text-align: left;
-										padding: 10px 25px;
+										padding: 10px 30px;
 									}
 								}
 							}
@@ -149,7 +150,7 @@
 							color: #ee7d31;
 							list-style-type: disc;
 
-							a {
+							p {
 								color: #757575;
 							}
 						}
@@ -221,6 +222,10 @@
 							}
 						}
 					}
+				}
+
+				.insta {
+					height: 510px;
 				}
 			}
 		}

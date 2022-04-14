@@ -58,7 +58,55 @@ function Youtube() {
 							<table>
 								<tr>
 									<td rowspan='3'>
-										<strong>31</strong> March 2022 Thursday
+										<strong>31</strong>
+										{'\n'} March {'\n'} 2022 {'\n'}Thursday
+									</td>
+									<td colspan='3'>What is Graphic Design?</td>
+								</tr>
+								<tr>
+									<td colspan='3'>
+										Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+										Modi nulla sit qui. Repellat dignissimos iure iusto
+										veritatis. Repellendus tenetur numquam quod minus voluptatum
+										aliquid, fugiat vero omnis illum nobis sapiente!
+									</td>
+								</tr>
+								<tr>
+									<td>By Matt</td>
+									<td>0 Comments</td>
+									<td>
+										<a href='#'>
+											More <FontAwesomeIcon icon={faArrowRight} />
+										</a>
+									</td>
+								</tr>
+							</table>
+						</article>
+
+						<article>
+							<div className='imgBox'>
+								<div className='img'></div>
+								<div className='sns'>
+									<a href='https://www.instagram.com/' target='_blank'>
+										<FontAwesomeIcon icon={faInstagram} />
+									</a>
+									<a href='https://twitter.com/' target='_blank'>
+										<FontAwesomeIcon icon={faTwitter} />
+									</a>
+									<a href='https://www.facebook.com/' target='_blank'>
+										<FontAwesomeIcon icon={faFacebook} />
+									</a>
+									<a href='https://www.google.co.kr/' target='_blank'>
+										<FontAwesomeIcon icon={faEnvelope} />
+									</a>
+								</div>
+							</div>
+
+							<table>
+								<tr>
+									<td rowspan='3'>
+										<strong>31</strong>
+										{'\n'} March {'\n'} 2022 {'\n'}Thursday
 									</td>
 									<td colspan='3'>What is Graphic Design?</td>
 								</tr>
@@ -84,31 +132,31 @@ function Youtube() {
 					</div>
 
 					<div className='right'>
-						<div class='sec cartegories'>
+						<div className='sec cartegories'>
 							<h2>Cartegories</h2>
 							<ul>
 								<li>
-									<a href='#'>Design</a>
+									<p>Design</p>
 								</li>
 								<li>
-									<a href='#'>UI/UX Design</a>
+									<p>UI/UX Design</p>
 								</li>
 								<li>
-									<a href='#'>Logo Design</a>
+									<p>Logo Design</p>
 								</li>
 								<li>
-									<a href='#'>brand Identity</a>
+									<p>brand Identity</p>
 								</li>
 								<li>
-									<a href='#'>Clipping Path</a>
+									<p>Clipping Path</p>
 								</li>
 								<li>
-									<a href='#'>Image Masking</a>
+									<p>Image Masking</p>
 								</li>
 							</ul>
 						</div>
 
-						<div class='sec post'>
+						<div className='sec post'>
 							<h2>New Posts</h2>
 							<>
 								{pics.map((pic, idx) => {
@@ -117,7 +165,7 @@ function Youtube() {
 							</>
 						</div>
 
-						<div class='sec notice'>
+						<div className='sec notice'>
 							<h2>Notice</h2>
 
 							<ul>
@@ -136,6 +184,10 @@ function Youtube() {
 									<a href='#'>Lorem ipsum dolor sit amet.</a>
 								</li>
 							</ul>
+						</div>
+
+						<div className='sec insta'>
+							<h2>Instagram</h2>
 						</div>
 					</div>
 				</div>

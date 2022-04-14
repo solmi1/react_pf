@@ -1,5 +1,6 @@
 import Layout from '../common/Layout';
 import axios from 'axios';
+import { NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
@@ -13,6 +14,7 @@ import { faCartFlatbed } from '@fortawesome/free-solid-svg-icons';
 import { faKeyboard } from '@fortawesome/free-solid-svg-icons';
 import { faNetworkWired } from '@fortawesome/free-solid-svg-icons';
 import { faFileArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 function About() {
 	const path = process.env.PUBLIC_URL;
@@ -36,7 +38,7 @@ function About() {
 					</p>
 				</div>
 
-				<div class='wrap'>
+				<div class='introduction'>
 					<div class='pic'></div>
 					<div class='txt'>
 						<h2>
@@ -89,7 +91,7 @@ function About() {
 					</div>
 				</div>
 
-				<div class='wrap'>
+				<div class='service'>
 					<article>
 						<FontAwesomeIcon icon={faMedal} />
 						<h2>TOP QUALITY SERVICE</h2>
@@ -108,7 +110,7 @@ function About() {
 					</article>
 				</div>
 
-				<div class='wrap'>
+				<div class='process'>
 					<div class='sub_tit'>
 						<h1>PROCESS</h1>
 						<p>Three Steps Solution</p>
@@ -128,7 +130,7 @@ function About() {
 					</article>
 				</div>
 
-				<div className='memberList'>
+				<div className='member'>
 					<h1>OUR TEAM</h1>
 					<p>The Leadership Team</p>
 					{members.map((member, idx) => {
@@ -156,6 +158,17 @@ function About() {
 							</article>
 						);
 					})}
+				</div>
+
+				<div class='questions'>
+					<div class='sub_tit'>
+						<h1>DO YOU HAVE ANY QUESTION?</h1>
+						<p>Feel free to request for qoote</p>
+					</div>
+
+					<NavLink to='/board'>
+						BOARD REQUEST FOR QUOTE <FontAwesomeIcon icon={faArrowRight} />
+					</NavLink>
 				</div>
 			</Layout>
 		</>

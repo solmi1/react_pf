@@ -25,123 +25,121 @@
 			margin-bottom: 25px;
 		}
 
-		.wrap {
-			&:nth-of-type(2) {
-				width: 100%;
-				margin-bottom: 150px;
+		.introduction {
+			width: 100%;
+			margin-bottom: 150px;
+
+			&::after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+
+			.pic {
+				float: left;
+				width: 15%;
+				height: 400px;
+
+				&:nth-of-type(1) {
+					background: url(./../../../build/img/pexels-negative-space-34088.jpg)
+						no-repeat center/cover;
+				}
+
+				&:nth-of-type(3) {
+					background: url(./../../../build/img/pexels-pavel-danilyuk-8038337.jpg)
+						no-repeat center/cover;
+				}
 
 				&::after {
 					content: '';
 					display: block;
-					clear: both;
-				}
-
-				.pic {
-					float: left;
-					width: 15%;
-					height: 400px;
-
-					&:nth-of-type(1) {
-						background: url(./../../../build/img/pexels-negative-space-34088.jpg)
-							no-repeat center/cover;
-					}
-
-					&:nth-of-type(3) {
-						background: url(./../../../build/img/pexels-pavel-danilyuk-8038337.jpg)
-							no-repeat center/cover;
-					}
-
-					&::after {
-						content: '';
-						display: block;
-						width: 40px;
-						height: 100%;
-						background: rgba(238, 125, 49, 0.5);
-						float: right;
-					}
-				}
-
-				.txt {
-					float: left;
-					width: 35%;
-					height: 400px;
-					padding: 40px 30px;
-					box-sizing: border-box;
-					box-shadow: 2px 5px 15px #eee;
-
-					h2 {
-						font: 500 14px/1.2 'Montserrat';
-						color: #757575;
-						margin-bottom: 30px;
-						font-size: 14px;
-						font-weight: 600;
-					}
-
-					p {
-						font: 12px/1.2 'Montserrat';
-						color: #aaa;
-						text-align: left;
-						font-weight: 300;
-						margin-bottom: 20px;
-
-						&:last-child {
-							margin-bottom: 0;
-						}
-					}
+					width: 40px;
+					height: 100%;
+					background: rgba(238, 125, 49, 0.5);
+					float: right;
 				}
 			}
 
-			&:nth-of-type(3) {
-				width: 100%;
-				margin-bottom: 150px;
+			.txt {
+				float: left;
+				width: 35%;
+				height: 400px;
+				padding: 40px 30px;
+				box-sizing: border-box;
+				box-shadow: 2px 5px 15px #eee;
 
-				&::after {
-					content: '';
-					display: block;
-					clear: both;
+				h2 {
+					font: 500 14px/1.2 'Montserrat';
+					color: #757575;
+					margin-bottom: 30px;
+					font-size: 14px;
+					font-weight: 600;
 				}
 
-				article {
-					float: left;
-					width: 280px;
-					margin-right: 20px;
-					padding: 40px;
-					box-sizing: border-box;
-					text-align: center;
-					box-shadow: 5px 5px 15px #eee;
+				p {
+					font: 12px/1.2 'Montserrat';
+					color: #aaa;
+					text-align: left;
+					font-weight: 300;
+					margin-bottom: 20px;
 
 					&:last-child {
-						margin-right: 0;
-					}
-				}
-			}
-
-			&:nth-of-type(4) {
-				margin-bottom: 150px;
-
-				&::after {
-					content: '';
-					display: block;
-					clear: both;
-				}
-
-				article {
-					float: left;
-					width: 380px;
-					margin-right: 20px;
-					padding: 80px 40px;
-					box-sizing: border-box;
-					text-align: center;
-					box-shadow: 5px 5px 15px #eee;
-
-					&:last-child {
-						margin-right: 0;
+						margin-bottom: 0;
 					}
 				}
 			}
 		}
 
-		.memberList {
+		.service {
+			width: 100%;
+			margin-bottom: 150px;
+
+			&::after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+
+			article {
+				float: left;
+				width: 280px;
+				margin-right: 20px;
+				padding: 40px;
+				box-sizing: border-box;
+				text-align: center;
+				box-shadow: 5px 5px 15px #eee;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+
+		.process {
+			margin-bottom: 150px;
+
+			&::after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+
+			article {
+				float: left;
+				width: 380px;
+				margin-right: 20px;
+				padding: 80px 40px;
+				box-sizing: border-box;
+				text-align: center;
+				box-shadow: 5px 5px 15px #eee;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+
+		.member {
 			width: 100%;
 			margin-bottom: 150px;
 
@@ -154,7 +152,6 @@
 			article {
 				float: left;
 				width: 360px;
-				height: 330px;
 				margin-right: 50px;
 
 				&:last-child {
@@ -163,7 +160,7 @@
 
 				.box {
 					width: 100%;
-					height: 100%;
+					height: 330px;
 					margin-bottom: 20px;
 
 					&::after {
@@ -213,6 +210,39 @@
 					font: 12px/1.2 'Montserrat';
 					color: #aaa;
 					text-align: left;
+				}
+			}
+		}
+
+		.questions {
+			a {
+				display: block;
+				margin: 0 auto;
+				width: 250px;
+				height: 70px;
+				background: #ee7d31;
+				color: #fff;
+				text-align: center;
+				font: 500 14px/70px 'Roboto';
+				box-shadow: -5px 5px 10px rgb(160 160 160 / 30%);
+				transition: 0.5s;
+				border: 1px solid transparent;
+
+				> svg {
+					color: #fff;
+					font-size: 14px;
+					margin-bottom: 0;
+					transition: 0.5s;
+				}
+
+				&:hover {
+					background-color: rgba(238, 125, 49, 0.4);
+					border: 1px solid #ee7d31;
+					color: #ee7d31;
+
+					> svg {
+						color: #ee7d31;
+					}
 				}
 			}
 		}
