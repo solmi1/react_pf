@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react_pf/static/css/main.ed639c9d.css",
-    "main.js": "/react_pf/static/js/main.0efa3318.js",
+    "main.css": "/react_pf/static/css/main.5d70d10c.css",
+    "main.js": "/react_pf/static/js/main.0f2d86eb.js",
     "static/media/pexels-gdtography-911738.jpg": "/react_pf/static/media/pexels-gdtography-911738.fc1b755e854763851b98.jpg",
     "static/media/pexels-negative-space-34088.jpg": "/react_pf/static/media/pexels-negative-space-34088.33f6954a5efca6f729c8.jpg",
     "static/media/pexels-pavel-danilyuk-8038337.jpg": "/react_pf/static/media/pexels-pavel-danilyuk-8038337.f63c47e9711ef1ae8b2d.jpg",
     "index.html": "/react_pf/index.html",
-    "main.ed639c9d.css.map": "/react_pf/static/css/main.ed639c9d.css.map",
-    "main.0efa3318.js.map": "/react_pf/static/js/main.0efa3318.js.map"
+    "main.5d70d10c.css.map": "/react_pf/static/css/main.5d70d10c.css.map",
+    "main.0f2d86eb.js.map": "/react_pf/static/js/main.0f2d86eb.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed639c9d.css",
-    "static/js/main.0efa3318.js"
+    "static/css/main.5d70d10c.css",
+    "static/js/main.0f2d86eb.js"
   ]
 }
