@@ -10,7 +10,21 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-function Youtube() {
+function Youtube(props) {
+	const names = [
+		'Design',
+		'UI/UX Design',
+		'Logo Design',
+		'Brand Identity',
+		'Clipping Path',
+		'Image Masking',
+	];
+	const listItem = names.map((name) => (
+		<li>
+			<p>{name}</p>
+		</li>
+	));
+
 	const path = process.env.PUBLIC_URL;
 	const imgs = ['brand01', 'brand02', 'brand03', 'brand04', 'brand05'];
 	const [pics] = useState(imgs);
@@ -38,122 +52,66 @@ function Youtube() {
 					<div className='left'>
 						<article>
 							<div className='imgBox'>
-								<div className='img'></div>
-								<div className='sns'>
-									<a href='https://www.instagram.com/' target='_blank'>
-										<FontAwesomeIcon icon={faInstagram} />
-									</a>
-									<a href='https://twitter.com/' target='_blank'>
-										<FontAwesomeIcon icon={faTwitter} />
-									</a>
-									<a href='https://www.facebook.com/' target='_blank'>
-										<FontAwesomeIcon icon={faFacebook} />
-									</a>
-									<a href='https://www.google.co.kr/' target='_blank'>
-										<FontAwesomeIcon icon={faEnvelope} />
-									</a>
-								</div>
+								{items.map((items, idx) => {
+									const desc = items.snippet.description;
+									const date = items.snippet.publishedAt;
+
+									return (
+										<article
+											key={idx}
+											onClick={() => {
+												setOpen(true);
+												setIndex(idx);
+											}}>
+											<div className='imgbox'>
+												<img src={items.snippet.thumbnails.maxres.url} />
+												<div className='sns'>
+													<a href='https://www.instagram.com/' target='_blank'>
+														<FontAwesomeIcon icon={faInstagram} />
+													</a>
+													<a href='https://twitter.com/' target='_blank'>
+														<FontAwesomeIcon icon={faTwitter} />
+													</a>
+													<a href='https://www.facebook.com/' target='_blank'>
+														<FontAwesomeIcon icon={faFacebook} />
+													</a>
+													<a href='https://www.google.co.kr/' target='_blank'>
+														<FontAwesomeIcon icon={faEnvelope} />
+													</a>
+												</div>
+											</div>
+
+											<table>
+												<tr>
+													<td rowspan='3'>{date.split('T')[0]}</td>
+													<td colspan='3'>{items.snippet.title}</td>
+												</tr>
+												<tr>
+													<td colspan='3'>
+														{desc.length > 150
+															? desc.substr(0, 200) + '...'
+															: desc}
+													</td>
+												</tr>
+												<tr>
+													<td>By {items.snippet.videoOwnerChannelTitle}</td>
+													<td>0 Comments</td>
+													<td>
+														More <FontAwesomeIcon icon={faArrowRight} />
+													</td>
+												</tr>
+											</table>
+										</article>
+									);
+								})}
 							</div>
-
-							<table>
-								<tr>
-									<td rowspan='3'>
-										<strong>31</strong>
-										{'\n'} March {'\n'} 2022 {'\n'}Thursday
-									</td>
-									<td colspan='3'>What is Graphic Design?</td>
-								</tr>
-								<tr>
-									<td colspan='3'>
-										Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-										Modi nulla sit qui. Repellat dignissimos iure iusto
-										veritatis. Repellendus tenetur numquam quod minus voluptatum
-										aliquid, fugiat vero omnis illum nobis sapiente!
-									</td>
-								</tr>
-								<tr>
-									<td>By Matt</td>
-									<td>0 Comments</td>
-									<td>
-										<a href='#'>
-											More <FontAwesomeIcon icon={faArrowRight} />
-										</a>
-									</td>
-								</tr>
-							</table>
-						</article>
-
-						<article>
-							<div className='imgBox'>
-								<div className='img'></div>
-								<div className='sns'>
-									<a href='https://www.instagram.com/' target='_blank'>
-										<FontAwesomeIcon icon={faInstagram} />
-									</a>
-									<a href='https://twitter.com/' target='_blank'>
-										<FontAwesomeIcon icon={faTwitter} />
-									</a>
-									<a href='https://www.facebook.com/' target='_blank'>
-										<FontAwesomeIcon icon={faFacebook} />
-									</a>
-									<a href='https://www.google.co.kr/' target='_blank'>
-										<FontAwesomeIcon icon={faEnvelope} />
-									</a>
-								</div>
-							</div>
-
-							<table>
-								<tr>
-									<td rowspan='3'>
-										<strong>31</strong>
-										{'\n'} March {'\n'} 2022 {'\n'}Thursday
-									</td>
-									<td colspan='3'>What is Graphic Design?</td>
-								</tr>
-								<tr>
-									<td colspan='3'>
-										Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-										Modi nulla sit qui. Repellat dignissimos iure iusto
-										veritatis. Repellendus tenetur numquam quod minus voluptatum
-										aliquid, fugiat vero omnis illum nobis sapiente!
-									</td>
-								</tr>
-								<tr>
-									<td>By Matt</td>
-									<td>0 Comments</td>
-									<td>
-										<a href='#'>
-											More <FontAwesomeIcon icon={faArrowRight} />
-										</a>
-									</td>
-								</tr>
-							</table>
 						</article>
 					</div>
 
 					<div className='right'>
 						<div className='sec cartegories'>
 							<h2>Cartegories</h2>
-							<ul>
-								<li>
-									<p>Design</p>
-								</li>
-								<li>
-									<p>UI/UX Design</p>
-								</li>
-								<li>
-									<p>Logo Design</p>
-								</li>
-								<li>
-									<p>brand Identity</p>
-								</li>
-								<li>
-									<p>Clipping Path</p>
-								</li>
-								<li>
-									<p>Image Masking</p>
-								</li>
-							</ul>
+							<ul>{listItem}</ul>
 						</div>
 
 						<div className='sec post'>
@@ -168,22 +126,7 @@ function Youtube() {
 						<div className='sec notice'>
 							<h2>Notice</h2>
 
-							<ul>
-								<li>
-									<a href='#'>Lorem ipsum dolor sit amet consectetur.</a>
-								</li>
-								<li>
-									<a href='#'>Lorem ipsum dolor sit.</a>
-								</li>
-								<li>
-									<a href='#'>
-										Lorem ipsum dolor sit amet consectetur adipisicing.
-									</a>
-								</li>
-								<li>
-									<a href='#'>Lorem ipsum dolor sit amet.</a>
-								</li>
-							</ul>
+							<ul></ul>
 						</div>
 
 						<div className='sec insta'>
