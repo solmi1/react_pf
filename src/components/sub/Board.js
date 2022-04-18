@@ -15,52 +15,51 @@ function Board() {
 		let data = localStorage.getItem('posts');
 		const dummyData = [
 			{
-				title: '10',
+				title: 'lorem 10',
 				content: 'Lorem ipsum dolor sit amet, consectetur adipisicing?',
-				plus: <FontAwesomeIcon icon={faPlus} />,
 			},
 			{
-				title: '9',
+				title: 'lorem 9',
 				content:
 					'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, rem?',
 			},
 			{
-				title: '8',
+				title: 'lorem 8',
 				content:
 					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil tempore amet quam at quasi animi?',
 			},
 			{
-				title: '7',
+				title: 'lorem 7',
 				content:
 					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo deleniti voluptatibus iure inventore?',
 			},
 			{
-				title: '6',
+				title: 'lorem 6',
 				content:
 					'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa?',
 			},
 			{
-				title: '5',
+				title: 'lorem 5',
 				content:
 					'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa?',
 			},
 			{
-				title: '4',
+				title: 'lorem 4',
 				content:
 					'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa?',
 			},
 			{
-				title: '3',
+				title: 'lorem 3',
 				content:
 					'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa?',
 			},
 			{
-				title: '2',
+				title: 'lorem 2',
 				content:
 					'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa?',
 			},
 			{
-				title: '1',
+				title: 'lorem 1',
 				content:
 					'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa?',
 			},
@@ -76,6 +75,7 @@ function Board() {
 	//로컬호스트의 데이터를 posts에 저장
 	//getLocalDate로 반환된 값을 posts state에 저장
 	const [posts, setPosts] = useState(getLocalDate);
+	const [num, setNum] = useState(0);
 
 	//post 입력창 초기화 함수
 	const resetPost = () => {
@@ -174,9 +174,12 @@ function Board() {
 				{posts.map((post, idx) => {
 					return (
 						<ul key={idx}>
+							<li>{post.num}</li>
 							<li>{post.title}</li>
 							<li>{post.content}</li>
-							{/* <li>{post.plus}</li> */}
+							<li>
+								<FontAwesomeIcon icon={faPlus} />
+							</li>
 						</ul>
 					);
 				})}

@@ -14,6 +14,7 @@ function Contact() {
 	const container = useRef(null);
 	const branch = useRef(null);
 	const { kakao } = window;
+
 	const info = [
 		{
 			title: 'Seoul',
