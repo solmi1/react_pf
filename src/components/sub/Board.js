@@ -2,6 +2,7 @@ import Layout from '../common/Layout';
 import { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 function Board() {
 	const input = useRef(null);
@@ -75,7 +76,6 @@ function Board() {
 	//로컬호스트의 데이터를 posts에 저장
 	//getLocalDate로 반환된 값을 posts state에 저장
 	const [posts, setPosts] = useState(getLocalDate);
-	const [num, setNum] = useState(0);
 
 	//post 입력창 초기화 함수
 	const resetPost = () => {
@@ -170,80 +170,70 @@ function Board() {
 				</li>
 			</ul>
 
+			<div className='box'>
+				<input type='text' placeholder='제목을 입력하세요.' ref={input} />
+				<br />
+				<textarea
+					cols='30'
+					rows='10'
+					placeholder='내용을 입력하세요.'
+					ref={textarea}></textarea>
+
+				<div className='btns'>
+					<button onClick={resetPost}>Cancel</button>
+					<button onClick={createPost}>Send</button>
+				</div>
+			</div>
+
 			<div id='faq'>
 				{posts.map((post, idx) => {
 					return (
-						<ul key={idx}>
-							<li>{post.num}</li>
-							<li>{post.title}</li>
-							<li>{post.content}</li>
-							<li>
-								<FontAwesomeIcon icon={faPlus} />
-							</li>
-						</ul>
+						<article key={idx}>
+							{post.enableUpdate ? (
+								//수정모드
+								<>
+									<h2>1</h2>
+									<div>
+										<div className='rebox'>
+											<input
+												type='text'
+												defaultValue={post.title}
+												ref={editInput}
+											/>
+											<br />
+											<textarea
+												defaultValue={post.content}
+												ref={editTextarea}></textarea>
+										</div>
+
+										<div className='btns_re'>
+											<button onClick={() => disbaleUpdate(idx)}>Cancel</button>
+											{/* 수정모드에 저장버튼 클릭시 해당 순서값을 saveUpdate에 전달해 호출 */}
+											<button onClick={() => saveUpdate(idx)}>Save</button>
+										</div>
+									</div>
+								</>
+							) : (
+								//출력모드
+								<>
+									<h2>1</h2>
+									<div className='txt'>
+										<h3>{post.title}</h3>
+										<p>{post.content}</p>
+									</div>
+									<div className='btns'>
+										<button onClick={() => enableUpdate(idx)}>
+											<FontAwesomeIcon icon={faPlus} />
+										</button>
+										<button onClick={() => deletePost(idx)}>
+											<FontAwesomeIcon icon={faXmark} />
+										</button>
+									</div>
+								</>
+							)}
+						</article>
 					);
 				})}
-			</div>
-
-			<div id='qna'>
-				<div className='box'>
-					<input type='text' placeholder='제목을 입력하세요.' ref={input} />
-					<br />
-					<textarea
-						cols='30'
-						rows='10'
-						placeholder='내용을 입력하세요.'
-						ref={textarea}></textarea>
-
-					<div className='btns'>
-						<button onClick={resetPost}>Cancel</button>
-						<button onClick={createPost}>Send</button>
-					</div>
-				</div>
-
-				<div className='showBox'>
-					{/* posts 갯수만큼 반복을 돌면서 데이터 출력 */}
-					{posts.map((post, idx) => {
-						return (
-							<article key={idx}>
-								{post.enableUpdate ? (
-									//수정모드
-
-									<>
-										<input
-											type='text'
-											defaultValue={post.title}
-											ref={editInput}
-										/>
-										<br />
-										<textarea
-											defaultValue={post.content}
-											ref={editTextarea}></textarea>
-
-										<div className='btns'>
-											<button onClick={() => disbaleUpdate(idx)}>취소</button>
-											{/* 수정모드에 저장버튼 클릭시 해당 순서값을 saveUpdate에 전달해 호출 */}
-											<button onClick={() => saveUpdate(idx)}>저장</button>
-										</div>
-									</>
-								) : (
-									//출력모드
-
-									<>
-										<h2>{post.title}</h2>
-										<p>{post.content}</p>
-
-										<div className='btns'>
-											{/* 수정버튼 클릭시 해당 포스트의 순서값을 enableUpdate함수로 전달 */}
-											<button onClick={() => enableUpdate(idx)}>Modify</button>
-											<button onClick={() => deletePost(idx)}>Delete</button>
-										</div>
-									</>
-								)}
-							</article>
-						);
-					})}
-				</div>
 			</div>
 		</Layout>
 	);
