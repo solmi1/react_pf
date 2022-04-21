@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react_pf/static/css/main.fec6348d.css",
+    "main.css": "/react_pf/static/css/main.123688da.css",
     "main.js": "/react_pf/static/js/main.7991afb1.js",
     "static/media/pexels-stephen-niemeier-176837.jpg": "/react_pf/static/media/pexels-stephen-niemeier-176837.8c465560b2a82e38544b.jpg",
     "static/media/pexels-essow-936722.jpg": "/react_pf/static/media/pexels-essow-936722.4a1e50fb43260677e6ab.jpg",
@@ -8,11 +8,11 @@
     "static/media/pexels-negative-space-34088.jpg": "/react_pf/static/media/pexels-negative-space-34088.33f6954a5efca6f729c8.jpg",
     "static/media/pexels-pavel-danilyuk-8038337.jpg": "/react_pf/static/media/pexels-pavel-danilyuk-8038337.f63c47e9711ef1ae8b2d.jpg",
     "index.html": "/react_pf/index.html",
-    "main.fec6348d.css.map": "/react_pf/static/css/main.fec6348d.css.map",
+    "main.123688da.css.map": "/react_pf/static/css/main.123688da.css.map",
     "main.7991afb1.js.map": "/react_pf/static/js/main.7991afb1.js.map"
   },
   "entrypoints": [
-    "static/css/main.fec6348d.css",
+    "static/css/main.123688da.css",
     "static/js/main.7991afb1.js"
   ]
 }
