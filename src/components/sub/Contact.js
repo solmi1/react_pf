@@ -80,9 +80,75 @@ function Contact() {
 		};
 	}, [index]);
 
+	const initVal = {
+		name: '',
+		email: '',
+		comments: '',
+	};
+	const [val, setVal] = useState(initVal);
+	const [err, setErr] = useState({});
+	const [success, setSuccess] = useState(false);
+	const [isSubmit, setIsSubmit] = useState(false);
+
+	const check = (val) => {
+		const errs = {};
+
+		if (val.name.length < 5) {
+			errs.name = '이름을 1글자 이상 입력해주세요';
+		}
+
+		if (val.email < 5 || !/@/.test(val.email)) {
+			errs.email = '이메일은 @ 포함해 입력해주세요';
+		}
+
+		if (val.comments.length < 10) {
+			errs.comments = '남기는 말은 10글자 이상 입력해주세요';
+		}
+
+		return errs;
+	};
+
+	const handleChange = (e) => {
+		const { name, value } = e.target;
+		setVal({ ...val, [name]: value });
+	};
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		setErr(check(val));
+	};
+
+	const handleReset = () => {
+		setVal(initVal);
+		setErr({});
+	};
+
+	useEffect(() => {
+		//객체의 키값을 반환하는 메서드
+		const len = Object.keys(err).length;
+
+		if (len === 0 && isSubmit) {
+			setSuccess(true);
+			//handleReset();
+			//err값이 의존성으로 등록되어 있는 useEffect안에
+			//다시 err 스테이트를 변경하는 함수나 구문이 있으면 무한루프에 빠지니 주의
+		} else {
+			setSuccess(false);
+		}
+	}, [err]);
+
+	//success 스테이트값을 의존성 배열로 해서
+	useEffect(() => {
+		//success값이 true로 변경되면
+		//기존 인풋요소 초기화
+		handleReset();
+	}, [success]);
+
 	return (
 		<>
 			<Layout name={'CONTACT'}>
+				{success ? alert('문의주셔서 감사합니다!') : null}
+
 				<div className='tit'>
 					<h1>CONTACT US</h1>
 					<p>Get it touch and let us know how we can help</p>
@@ -106,7 +172,7 @@ function Contact() {
 						<div id='map' ref={container}></div>
 					</div>
 
-					<div className='form'>
+					<div className='formBox'>
 						<div className='sns'>
 							<h2>Connect</h2>
 
@@ -124,33 +190,77 @@ function Contact() {
 							</a>
 						</div>
 
-						<div className='request'>
-							<h2>Send a Request</h2>
+						<form onSubmit={handleSubmit}>
+							<fieldset>
+								<legend>문의사항 폼 양식</legend>
+								<h2>Send a Request</h2>
 
-							<input
-								type='text'
-								name='name'
-								id='name'
-								placeholder='Your Name'
-								required
-							/>
-							<input
-								type='text'
-								name='mail'
-								id='mail'
-								placeholder='Your Email'
-								required
-							/>
+								<table>
+									<caption>문의사항 입력</caption>
+									<tr>
+										<th scope='row'>
+											<label htmlFor='name'>Name</label>
+										</th>
+										<td>
+											<input
+												type='text'
+												name='name'
+												id='name'
+												placeholder='Your Name'
+												value={val.name}
+												onChange={handleChange}
+											/>
+											<span className='err'>{err.name}</span>
+										</td>
+									</tr>
 
-							<textarea
-								name='request'
-								id='request'
-								placeholder='Your Request'
-								cols='30'
-								rows='10'></textarea>
-						</div>
+									<tr>
+										<th scope='row'>
+											<label htmlFor='email'>E-MAIL</label>
+										</th>
+										<td>
+											<input
+												type='text'
+												name='email'
+												id='email'
+												placeholder='Your Email'
+												value={val.email}
+												onChange={handleChange}
+											/>
+											<span className='err'>{err.email}</span>
+										</td>
+									</tr>
 
-						<button>SEND</button>
+									<tr>
+										<th scope='row'>
+											<label htmlFor='comments'>COMMENTS</label>
+										</th>
+										<td>
+											<textarea
+												name='comments'
+												id='comments'
+												placeholder='Your Request'
+												cols='30'
+												rows='10'
+												value={val.comments}
+												onChange={handleChange}></textarea>
+											<span className='err'>{err.comments}</span>
+										</td>
+									</tr>
+
+									<tr>
+										<input type='reset' value='CANCEL' onClick={handleReset} />
+										<input
+											type='submit'
+											value='SEND'
+											onClick={() => {
+												setIsSubmit(true);
+											}}
+										/>
+									</tr>
+								</table>
+							</fieldset>
+						</form>
 					</div>
 				</div>
 
@@ -196,29 +306,52 @@ function Contact() {
 						<p>To our newslettor</p>
 					</div>
 
-					<div className='inputBox'>
-						<h2>Name</h2>
-						<input
-							type='text'
-							name='name'
-							id='name'
-							placeholder='Your Name'
-							required
-						/>
-					</div>
+					<form onSubmit={handleSubmit}>
+						<fieldset>
+							<legend>뉴스레터 폼 양식</legend>
+							<h2>Send a Request</h2>
 
-					<div className='inputBox'>
-						<h2>Email</h2>
-						<input
-							type='text'
-							name='mail'
-							id='mail'
-							placeholder='Your Email'
-							required
-						/>
-					</div>
+							<table>
+								<caption>뉴스레터 정보 입력</caption>
+								<tr>
+									<td>
+										<input
+											type='text'
+											name='name'
+											id='name'
+											placeholder='Your Name'
+											value={val.name}
+											onChange={handleChange}
+										/>
+										<span className='err'>{err.name}</span>
+									</td>
+									<td>
+										<input
+											type='text'
+											name='email'
+											id='email'
+											placeholder='Your Email'
+											value={val.email}
+											onChange={handleChange}
+										/>
+										<span className='err'>{err.email}</span>
+									</td>
+								</tr>
 
-					<button>Subscribe to the newsletter</button>
+								<tr>
+									<td colSpan={2}>
+										<input
+											type='submit'
+											value='Subscribe to the newsletter'
+											onClick={() => {
+												setIsSubmit(true);
+											}}
+										/>
+									</td>
+								</tr>
+							</table>
+						</fieldset>
+					</form>
 				</div>
 			</Layout>
 		</>

@@ -1,12 +1,50 @@
-.Gallery {
-	.inner {
-		ul {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			justify-content: space-between;
+.PORTFOLIO {
+	.topBtns {
+		margin-bottom: 40px;
+		padding: 0 10px;
+		display: flex;
+		justify-content: space-between;
 
-			li {
+		> button {
+			width: 100px;
+			height: 30px;
+			background: #ee7d31;
+			border: none;
+			color: #fff;
+			font: 12px/1.2 'Montserrat';
+			cursor: pointer;
+		}
+		.searchBox {
+			width: 50%;
+			display: flex;
+			justify-content: flex-end;
+
+			input {
+				width: 40%;
+				height: 30px;
+				margin-right: 10px;
+				border: 1px solid #ee7d31;
+			}
+
+			button {
+				width: 80px;
+				height: 30px;
+				background: #ee7d31;
+				border: none;
+				color: #fff;
+				font: 12px/1.2 'Montserrat';
+			}
+		}
+	}
+
+	.frame {
+		div {
+			article {
+				// display: flex;
+				// flex-direction: row;
+				// flex-wrap: wrap;
+				// justify-content: space-between;
+
 				width: 25%;
 				height: 295px;
 				margin-bottom: 20px;
@@ -45,7 +83,7 @@
 					&::after {
 						display: none;
 						content: '';
-						width: 50%;
+						width: 70%;
 						height: 100%;
 						background: rgba(238, 125, 49, 0.5);
 						position: absolute;
@@ -58,7 +96,7 @@
 						display: none;
 						position: absolute;
 						bottom: 10px;
-						right: 20px;
+						right: 22px;
 						width: 35px;
 						height: 35px;
 						border-radius: 50%;

@@ -77,11 +77,11 @@
 				}
 			}
 
-			.form {
+			.formBox {
 				float: left;
 				width: 50%;
 				height: 100%;
-				padding: 30px;
+				padding: 10px 30px;
 
 				h2 {
 					font: 600 16px/1 'Montserrat';
@@ -111,42 +111,87 @@
 					}
 				}
 
-				.request {
-					input {
-						width: 100%;
-						height: 40px;
+				form {
+					fieldset {
 						border: none;
-						box-shadow: 2px 2px 12px #eee;
-						padding: 0 20px;
-						margin-bottom: 20px;
 
-						&:last-child {
-							margin-bottom: 0;
+						legend,
+						caption {
+							text-indent: -99999px;
+							display: none;
 						}
-					}
 
-					textarea {
-						width: 100%;
-						height: 200px;
-						margin-bottom: 30px;
-						resize: none;
-						padding: 20px;
-						border: none;
-						box-shadow: 2px 5px 15px #eee;
-					}
-				}
+						table {
+							width: 100%;
 
-				button {
-					width: 100%;
-					height: 60px;
-					background: #ee7d31;
-					color: #fff;
-					border: none;
+							tr {
+								th {
+									display: none;
+								}
 
-					&:hover {
-						background-color: rgba(238, 125, 49, 0.4);
-						border: 1px solid #ee7d31;
-						color: #ee7d31;
+								&:nth-of-type(3) {
+									td {
+										height: 230px;
+									}
+								}
+
+								&:last-child {
+									height: 90px;
+									display: flex;
+									align-items: flex-end;
+								}
+
+								td {
+									width: 100%;
+									height: 70px;
+
+									input {
+										width: 100%;
+										height: 40px;
+										border: none;
+										box-shadow: 2px 2px 12px #eee;
+										padding: 0 20px;
+
+										font: 500 12px/1 'Montserrat';
+									}
+
+									textarea {
+										width: 100%;
+										height: 200px;
+										resize: none;
+										padding: 20px;
+										border: none;
+										box-shadow: 2px 5px 15px #eee;
+										font: 500 12px/1 'Montserrat';
+									}
+
+									.err {
+										font: 500 10px/1 'Montserrat';
+										color: red;
+									}
+								}
+
+								input[type='reset'],
+								input[type='submit'] {
+									width: calc(50% - 10px);
+									height: 60px;
+									margin-right: 20px;
+									background: #ee7d31;
+									color: #fff;
+									border: none;
+
+									&:hover {
+										background-color: rgba(238, 125, 49, 0.4);
+										border: 1px solid #ee7d31;
+										color: #ee7d31;
+									}
+								}
+
+								input[type='submit'] {
+									margin-right: 0;
+								}
+							}
+						}
 					}
 				}
 			}
@@ -251,45 +296,61 @@
 				}
 			}
 
-			.inputBox {
-				float: left;
-				width: calc(100% / 3 - 10px);
-				margin-right: 20px;
-
-				&:nth-of-type(3) {
-					margin-right: 0;
-				}
-
-				h2 {
-					color: #666;
-					font: 600 14px/1 'Montserrat';
-					margin-bottom: 15px;
-				}
-
-				input {
-					width: 100%;
-					height: 40px;
+			form {
+				fieldset {
 					border: none;
-					box-shadow: 2px 2px 12px #eee;
-					padding: 0 20px;
-				}
-			}
 
-			button {
-				float: right;
-				width: calc(100% / 3 * 2);
-				height: 60px;
-				background: #ee7d31;
-				color: #fff;
-				border: none;
-				margin-top: 50px;
-				cursor: pointer;
-				transition: 0.5s;
+					legend,
+					caption {
+						text-indent: -99999px;
+						display: none;
+					}
 
-				&:hover {
-					background-color: rgba(238, 125, 49, 0.4);
-					border: 1px solid #ee7d31;
-					color: #ee7d31;
+					table {
+						width: 100%;
+
+						tr {
+							width: 100%;
+
+							th {
+								display: none;
+							}
+
+							td {
+								height: 80px;
+
+								input {
+									width: calc(100% - 10px);
+									height: 40px;
+									border: none;
+									box-shadow: 2px 2px 12px #eee;
+									padding: 0 20px;
+									margin-right: 20px;
+
+									font: 500 12px/1 'Montserrat';
+								}
+
+								.err {
+									font: 500 10px/1 'Montserrat';
+									color: red;
+								}
+							}
+
+							input[type='submit'] {
+								width: 100%;
+								height: 60px;
+								background: #ee7d31;
+								color: #fff;
+								border: none;
+
+								&:hover {
+									background-color: rgba(238, 125, 49, 0.4);
+									border: 1px solid #ee7d31;
+									color: #ee7d31;
+								}
+							}
+						}
+					}
 				}
 			}
 		}

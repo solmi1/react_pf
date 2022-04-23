@@ -14,52 +14,34 @@ function Board() {
 	const getLocalDate = () => {
 		//로컬호스트에서 데이터 불러옴
 		let data = localStorage.getItem('posts');
+
 		const dummyData = [
 			{
-				title: 'lorem 10',
-				content: 'Lorem ipsum dolor sit amet, consectetur adipisicing?',
-			},
-			{
-				title: 'lorem 9',
-				content:
-					'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, rem?',
-			},
-			{
-				title: 'lorem 8',
-				content:
-					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil tempore amet quam at quasi animi?',
-			},
-			{
-				title: 'lorem 7',
-				content:
-					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo deleniti voluptatibus iure inventore?',
-			},
-			{
-				title: 'lorem 6',
-				content:
-					'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa?',
-			},
-			{
+				no: '5',
 				title: 'lorem 5',
 				content:
 					'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa?',
 			},
 			{
+				no: '4',
 				title: 'lorem 4',
 				content:
 					'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa?',
 			},
 			{
+				no: '3',
 				title: 'lorem 3',
 				content:
 					'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa?',
 			},
 			{
+				no: '2',
 				title: 'lorem 2',
 				content:
 					'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa?',
 			},
 			{
+				no: '1',
 				title: 'lorem 1',
 				content:
 					'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa?',
@@ -141,10 +123,8 @@ function Board() {
 				if (idx === index) {
 					post.title = editInput.current.value;
 					post.content = editTextarea.current.value;
-
 					post.enableUpdate = false;
 				}
-
 				return post;
 			})
 		);
@@ -160,15 +140,6 @@ function Board() {
 	return (
 		<Layout name={'BOARD'}>
 			<h1>FAQ's</h1>
-
-			<ul class='btns'>
-				<li>
-					<a href='#'>FAQ</a>
-				</li>
-				<li>
-					<a href='#'>QNA</a>
-				</li>
-			</ul>
 
 			<div className='box'>
 				<input type='text' placeholder='제목을 입력하세요.' ref={input} />
@@ -192,7 +163,8 @@ function Board() {
 							{post.enableUpdate ? (
 								//수정모드
 								<>
-									<h2>1</h2>
+									<h2 defaultValue={post.no}></h2>
+
 									<div>
 										<div className='rebox'>
 											<input
@@ -216,7 +188,7 @@ function Board() {
 							) : (
 								//출력모드
 								<>
-									<h2>1</h2>
+									<h2>{posts.length}</h2>
 									<div className='txt'>
 										<h3>{post.title}</h3>
 										<p>{post.content}</p>

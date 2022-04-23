@@ -2,7 +2,8 @@ import Layout from '../common/Layout';
 import Popup from '../common/Popup';
 import Images from './Images';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
@@ -11,6 +12,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 function Youtube(props) {
+	// 카테고리
 	const names = [
 		'Design',
 		'UI/UX Design',
@@ -25,13 +27,23 @@ function Youtube(props) {
 		</li>
 	));
 
+	// 뉴포스트
 	const path = process.env.PUBLIC_URL;
 	const imgs = ['brand01', 'brand02', 'brand03', 'brand04', 'brand05'];
 	const [pics] = useState(imgs);
 
+	//공지사항
+	const getLocalData = () => {
+		let data = localStorage.getItem('posts');
+		data = JSON.parse(data);
+		return data;
+	};
+	const [posts, setPosts] = useState(getLocalData);
+
+	// 유튜브
 	const key = 'AIzaSyBVwYJUnAqD52l07QdQxyBTARq6SOpwgmA';
 	const num = 4;
-	const id = 'PLP1K1O_EnQH8JMRalZtLZYTS2yFF-pC_f';
+	const id = 'PLP1K1O_EnQH9ylQZIezxV4c1B7vVKRkmj';
 	const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&maxResults=${num}&playlistId=${id}`;
 
 	const [items, setItems] = useState([]);
@@ -125,8 +137,25 @@ function Youtube(props) {
 
 						<div className='sec notice'>
 							<h2>Notice</h2>
-
-							<ul></ul>
+							<ul>
+								{posts.map((post, idx) => {
+									let con = post.content.split('\n');
+									if (idx < 5) {
+										return (
+											<li key={idx}>
+												<NavLink to='/board'>
+													<h3>{post.title}</h3>
+													<p>
+														{con.map((txt, idx) => {
+															return <>{txt}</>;
+														})}
+													</p>
+												</NavLink>
+											</li>
+										);
+									}
+								})}
+							</ul>
 						</div>
 
 						<div className='sec insta'>

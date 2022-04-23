@@ -212,12 +212,27 @@
 						padding: 0 30px;
 
 						li {
-							font: 400 10px/2 'Montserrat';
+							font-size: 10px;
 							color: #ee7d31;
 							list-style-type: disc;
+							margin-bottom: 20px;
+							cursor: pointer;
+
+							&:last-child {
+								margin-bottom: 0;
+							}
 
 							a {
-								color: #757575;
+								color: #666;
+
+								h3 {
+									font: 600 10px/1.2 'Montserrat';
+									margin-bottom: 5px;
+								}
+
+								p {
+									font: 400 8px/1.2 'Montserrat';
+								}
 							}
 						}
 					}
