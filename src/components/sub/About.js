@@ -3,18 +3,23 @@ import axios from 'axios';
 import { NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faFacebook } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faMedal } from '@fortawesome/free-solid-svg-icons';
-import { faUsers } from '@fortawesome/free-solid-svg-icons';
-import { faCircleDollarToSlot } from '@fortawesome/free-solid-svg-icons';
-import { faCartFlatbed } from '@fortawesome/free-solid-svg-icons';
-import { faKeyboard } from '@fortawesome/free-solid-svg-icons';
-import { faNetworkWired } from '@fortawesome/free-solid-svg-icons';
-import { faFileArrowUp } from '@fortawesome/free-solid-svg-icons';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import {
+	faInstagram,
+	faTwitter,
+	faFacebook,
+} from '@fortawesome/free-brands-svg-icons';
+
+import {
+	faEnvelope,
+	faMedal,
+	faUsers,
+	faCircleDollarToSlot,
+	faCartFlatbed,
+	faKeyboard,
+	faNetworkWired,
+	faFileArrowUp,
+	faArrowRight,
+} from '@fortawesome/free-solid-svg-icons';
 
 function About() {
 	const path = process.env.PUBLIC_URL;

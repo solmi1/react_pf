@@ -1,0 +1,85 @@
+#about {
+	width: 100%;
+	position: relative;
+
+	.pic {
+		width: 60%;
+		height: 600px;
+		background: url(../../../public/img/pexels-quenani-leal-721480.jpg)
+			no-repeat top center/cover fixed;
+		filter: grayscale(1);
+	}
+
+	.box {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 30%;
+		padding: 80px 40px;
+		background-color: #fff;
+		left: 60%;
+		box-shadow: 2px 5px 15px #eee;
+		box-sizing: border-box;
+
+		&::after {
+			display: block;
+			content: '';
+			width: 100px;
+			height: 100%;
+			background-color: rgba(238, 125, 49, 0.5);
+			position: absolute;
+			top: 0;
+			left: -100px;
+		}
+
+		h1 {
+			text-align: left;
+			position: relative;
+			margin-bottom: 20px;
+			font: 500 30px/1 'Montserrat';
+			color: #666;
+
+			&::after {
+				content: '';
+				display: block;
+				width: 170px;
+				height: 5px;
+				background-color: rgba(238, 125, 49, 0.5);
+				position: absolute;
+				bottom: 2px;
+				z-index: -1;
+			}
+		}
+
+		h2 {
+			font: 500 14px/1.2 'Montserrat';
+			color: #757575;
+			margin-bottom: 30px;
+		}
+
+		p {
+			font: 12px/1.5 'Montserrat';
+			color: #aaa;
+			text-align: left;
+			margin-bottom: 30px;
+		}
+
+		.btn {
+			display: block;
+			width: 170px;
+			height: 45px;
+			background: #ee7d31;
+			text-align: center;
+			font: 500 12px/45px 'Roboto';
+			color: #fff;
+			box-shadow: 2px 5px 15px #eee;
+			transition: 0.5s;
+
+			&:hover {
+				background-color: rgba(211, 119, 58, 0.3);
+				border: 1px solid #ee7d31;
+				color: #ee7d31;
+			}
+		}
+	}
+}

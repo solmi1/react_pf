@@ -1,0 +1,47 @@
+#satisfied {
+	width: 100%;
+	margin: 150px auto;
+
+	.inner {
+		width: 1180px;
+		margin: 0 auto;
+
+		&::after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+		article {
+			float: left;
+			width: 380px;
+			margin-right: 20px;
+			padding: 40px;
+			box-sizing: border-box;
+			text-align: center;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			h1 {
+				font: 500 30px/1 'Montserrat';
+				color: #666;
+				text-align: center;
+				margin-bottom: 10px;
+			}
+
+			p {
+				font: 12px/1.2 'Montserrat';
+				color: #aaa;
+				text-align: center;
+			}
+
+			svg {
+				font-size: 40px;
+				color: #ee7d31;
+				margin-bottom: 25px;
+			}
+		}
+	}
+}

@@ -1,0 +1,99 @@
+#contact {
+	width: 100%;
+	margin-bottom: 150px;
+
+	.inner {
+		width: 1180px;
+		margin: 0 auto;
+
+		h1 {
+			font: 500 30px/1 'Montserrat';
+			color: #666;
+			text-align: right;
+			position: relative;
+			margin-bottom: 40px;
+			margin-right: 120px;
+
+			&::after {
+				content: '';
+				display: block;
+				width: 205px;
+				height: 5px;
+				background-color: rgba(238, 125, 49, 0.5);
+				position: absolute;
+				bottom: 2px;
+				right: 0;
+				z-index: -1;
+			}
+		}
+
+		.wrap {
+			display: flex;
+			justify-content: space-around;
+
+			article {
+				a {
+					display: block;
+					text-align: left;
+					margin-bottom: 30px;
+					font: 12px/1.2 'Montserrat';
+					color: #aaa;
+				}
+
+				p {
+					text-align: left;
+					margin-bottom: 30px;
+					font: 12px/1.2 'Montserrat';
+					color: #aaa;
+					line-height: 1.5;
+				}
+
+				&:nth-of-type(2) {
+					p {
+						margin-bottom: 20px;
+					}
+
+					.sns {
+						a {
+							display: block;
+							width: 25px;
+							height: 25px;
+							border-radius: 50%;
+							background-color: #ee7d31;
+							text-align: center;
+							line-height: 25px;
+							margin-right: 27px;
+							float: left;
+
+							&:last-child {
+								margin-right: 0;
+							}
+
+							svg {
+								color: #fff;
+							}
+						}
+					}
+				}
+
+				.btn {
+					display: block;
+					width: 170px;
+					height: 45px;
+					background: #ee7d31;
+					text-align: center;
+					font: 500 12px/45px 'Roboto';
+					color: #fff;
+					box-shadow: 2px 5px 15px #eee;
+					transition: 0.5s;
+
+					&:hover {
+						background-color: rgba(211, 119, 58, 0.3);
+						border: 1px solid #ee7d31;
+						color: #ee7d31;
+					}
+				}
+			}
+		}
+	}
+}

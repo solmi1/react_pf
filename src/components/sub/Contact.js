@@ -1,13 +1,17 @@
 import React, { useRef, useEffect, useState } from 'react';
 import Layout from '../common/Layout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
-import { faPhoneFlip } from '@fortawesome/free-solid-svg-icons';
-import { faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faFacebook } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import {
+	faLocationDot,
+	faPhoneFlip,
+	faEnvelopeOpen,
+	faEnvelope,
+} from '@fortawesome/free-solid-svg-icons';
+import {
+	faInstagram,
+	faTwitter,
+	faFacebook,
+} from '@fortawesome/free-brands-svg-icons';
 
 function Contact() {
 	const path = process.env.PUBLIC_URL;
