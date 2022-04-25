@@ -6,7 +6,7 @@ import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 
 //main 컴포넌트
-import Main from './components/main/Main';
+// import Main from './components/main/Main';
 import Visual from './components/main/Visual';
 import Ser from './components/main/Ser';
 import Ab from './components/main/Ab';

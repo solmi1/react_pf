@@ -40,7 +40,9 @@ function Youtube(props) {
 	};
 	const [posts, setPosts] = useState(getLocalData);
 
-	// 유튜브
+	// 유튜브 상단
+
+	// 유튜브 하단
 	const key = 'AIzaSyBVwYJUnAqD52l07QdQxyBTARq6SOpwgmA';
 	const num = 4;
 	const id = 'PLP1K1O_EnQH9ylQZIezxV4c1B7vVKRkmj';
@@ -52,7 +54,6 @@ function Youtube(props) {
 
 	useEffect(() => {
 		axios.get(url).then((json) => {
-			console.log(json.data.items);
 			setItems(json.data.items);
 		});
 	}, []);
@@ -62,20 +63,21 @@ function Youtube(props) {
 			<Layout name={'YOUTUBE'}>
 				<div className='top'>
 					<div className='left'>
-						<article>
+						<div>
 							<div className='imgBox'>
 								{items.map((items, idx) => {
 									const desc = items.snippet.description;
 									const date = items.snippet.publishedAt;
 
 									return (
-										<article
-											key={idx}
-											onClick={() => {
-												setOpen(true);
-												setIndex(idx);
-											}}>
-											<div className='imgbox'>
+										<article>
+											<div
+												key={idx}
+												onClick={() => {
+													setOpen(true);
+													setIndex(idx);
+												}}
+												className='imgbox'>
 												<img src={items.snippet.thumbnails.maxres.url} />
 												<div className='sns'>
 													<a href='https://www.instagram.com/' target='_blank'>
@@ -108,7 +110,12 @@ function Youtube(props) {
 												<tr>
 													<td>By {items.snippet.videoOwnerChannelTitle}</td>
 													<td>0 Comments</td>
-													<td>
+													<td
+														key={idx}
+														onClick={() => {
+															setOpen(true);
+															setIndex(idx);
+														}}>
 														More <FontAwesomeIcon icon={faArrowRight} />
 													</td>
 												</tr>
@@ -117,7 +124,7 @@ function Youtube(props) {
 									);
 								})}
 							</div>
-						</article>
+						</div>
 					</div>
 
 					<div className='right'>
@@ -177,14 +184,23 @@ function Youtube(props) {
 										setOpen(true);
 										setIndex(idx);
 									}}>
-									<img src={items.snippet.thumbnails.medium.url} />
+									<div className='imgBox'>
+										<img src={items.snippet.thumbnails.medium.url} />
+									</div>
 									<h2>{items.snippet.title}</h2>
+									<div className='txt'>
+										<p>
+											{desc.length > 50 ? desc.substr(0, 120) + '...' : desc}
+										</p>
+										<span>{date.split('T')[0]}</span>
+									</div>
 								</article>
 							);
 						})}
 					</div>
 				</div>
 			</Layout>
+
 			{open ? (
 				<Popup setOpen={setOpen}>
 					<iframe

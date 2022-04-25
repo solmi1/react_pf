@@ -125,7 +125,6 @@ function Portfolio() {
 					<Maconry elementType={'div'} options={masonryOptions}>
 						{items.map((item, idx) => {
 							const desc = item.title;
-							console.log(item);
 							return (
 								<article key={idx}>
 									<div className='box'>
@@ -155,7 +154,7 @@ function Portfolio() {
 			</Layout>
 
 			{open ? (
-				<Popup ref={pop}>
+				<Popup setOpen={setOpen}>
 					<img
 						src={`https:live.staticflickr.com/${items[index].server}/${items[index].id}_${items[index].secret}_b.jpg`}
 					/>

@@ -17,31 +17,26 @@ function Board() {
 
 		const dummyData = [
 			{
-				no: '5',
 				title: 'lorem 5',
 				content:
 					'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa?',
 			},
 			{
-				no: '4',
 				title: 'lorem 4',
 				content:
 					'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa?',
 			},
 			{
-				no: '3',
 				title: 'lorem 3',
 				content:
 					'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa?',
 			},
 			{
-				no: '2',
 				title: 'lorem 2',
 				content:
 					'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa?',
 			},
 			{
-				no: '1',
 				title: 'lorem 1',
 				content:
 					'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa?',
@@ -80,14 +75,12 @@ function Board() {
 		resetPost();
 	};
 
-	//post 삭제 함수
+	//게시글 삭제 함수
 	const deletePost = (index) => {
-		console.log('삭제할 포스트 순번', index);
-
 		setPosts(posts.filter((_, idx) => idx !== index));
 	};
 
-	//글 수정 모드 변경 함수
+	//게시글 수정 모드
 	const enableUpdate = (index) => {
 		setPosts(
 			posts.map((post, idx) => {
@@ -98,7 +91,7 @@ function Board() {
 		);
 	};
 
-	//글 출력모드 변경 함수
+	//게시글 출력모드
 	const disbaleUpdate = (index) => {
 		setPosts(
 			posts.map((post, idx) => {
@@ -108,7 +101,7 @@ function Board() {
 		);
 	};
 
-	//글 수정 모드 저장 함수
+	//게시글 수정모드 저장
 	const saveUpdate = (index) => {
 		const inputVal = editInput.current.value.trim();
 		const textareaVal = editTextarea.current.value.trim();
@@ -138,8 +131,8 @@ function Board() {
 	}, [posts]);
 
 	return (
-		<Layout name={'BOARD'}>
-			<h1>FAQ's</h1>
+		<Layout name={'NOTICE'}>
+			{/* <h1>FAQ's</h1> */}
 
 			<div className='box'>
 				<input type='text' placeholder='제목을 입력하세요.' ref={input} />
@@ -163,8 +156,7 @@ function Board() {
 							{post.enableUpdate ? (
 								//수정모드
 								<>
-									<h2 defaultValue={post.no}></h2>
-
+									<h2>{idx + 1}</h2>
 									<div>
 										<div className='rebox'>
 											<input
@@ -188,7 +180,7 @@ function Board() {
 							) : (
 								//출력모드
 								<>
-									<h2>{posts.length}</h2>
+									<h2>{idx + 1}</h2>
 									<div className='txt'>
 										<h3>{post.title}</h3>
 										<p>{post.content}</p>
