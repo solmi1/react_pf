@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react_pf/static/css/main.9f00e40a.css",
-    "main.js": "/react_pf/static/js/main.591a1cab.js",
+    "main.css": "/react_pf/static/css/main.94f28ebb.css",
+    "main.js": "/react_pf/static/js/main.e1a7d538.js",
     "static/media/pexels-stephen-niemeier-176837.jpg": "/react_pf/static/media/pexels-stephen-niemeier-176837.8c465560b2a82e38544b.jpg",
     "static/media/pexels-essow-936722.jpg": "/react_pf/static/media/pexels-essow-936722.4a1e50fb43260677e6ab.jpg",
     "static/media/pexels-gdtography-911738.jpg": "/react_pf/static/media/pexels-gdtography-911738.fc1b755e854763851b98.jpg",
@@ -9,11 +9,11 @@
     "static/media/pexels-negative-space-34088.jpg": "/react_pf/static/media/pexels-negative-space-34088.33f6954a5efca6f729c8.jpg",
     "static/media/pexels-pavel-danilyuk-8038337.jpg": "/react_pf/static/media/pexels-pavel-danilyuk-8038337.f63c47e9711ef1ae8b2d.jpg",
     "index.html": "/react_pf/index.html",
-    "main.9f00e40a.css.map": "/react_pf/static/css/main.9f00e40a.css.map",
-    "main.591a1cab.js.map": "/react_pf/static/js/main.591a1cab.js.map"
+    "main.94f28ebb.css.map": "/react_pf/static/css/main.94f28ebb.css.map",
+    "main.e1a7d538.js.map": "/react_pf/static/js/main.e1a7d538.js.map"
   },
   "entrypoints": [
-    "static/css/main.9f00e40a.css",
-    "static/js/main.591a1cab.js"
+    "static/css/main.94f28ebb.css",
+    "static/js/main.e1a7d538.js"
   ]
 }
