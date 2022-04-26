@@ -1,4 +1,3 @@
-import Header from '../common/Header';
 import Visual from './Visual';
 import Ser from './Ser';
 import Ab from './Ab';
@@ -10,7 +9,6 @@ import Por from './Por';
 function Main() {
 	return (
 		<main>
-			<Header />
 			<Visual />
 			<Ser />
 			<Ab />

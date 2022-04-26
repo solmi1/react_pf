@@ -1,4 +1,21 @@
 .PORTFOLIO {
+	.loading {
+		width: 100vw;
+		height: 100vh;
+		background: rgba(0, 0, 0, 0.3);
+		position: fixed;
+		z-index: 5;
+		top: 0;
+		left: 0;
+
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
 	.topBtns {
 		margin-bottom: 40px;
 		padding: 0 10px;

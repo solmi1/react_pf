@@ -14,7 +14,6 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 function Contact() {
-	console.log('contact 컴포넌트 함수 호출');
 	const path = process.env.PUBLIC_URL;
 	const container = useRef(null);
 	const branch = useRef(null);
@@ -241,7 +240,7 @@ function Contact() {
 									</tr>
 
 									<tr>
-										<th colSpan='2'>
+										<td colSpan='2'>
 											<input
 												type='reset'
 												value='CANCEL'
@@ -254,7 +253,7 @@ function Contact() {
 													setIsSubmit(true);
 												}}
 											/>
-										</th>
+										</td>
 									</tr>
 								</table>
 							</fieldset>

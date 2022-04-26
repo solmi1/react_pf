@@ -127,7 +127,9 @@ function Portfolio() {
 		<>
 			<Layout name={'PORTFOLIO'}>
 				{loading ? (
-					<img className='loading' src={path + '/img/loading.gif'} />
+					<div className='loading'>
+						<img src={path + '/img/loading.gif'} />
+					</div>
 				) : null}
 
 				<div className='topBtns'>

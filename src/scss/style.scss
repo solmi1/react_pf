@@ -51,6 +51,20 @@ body.orange {
 		}
 	}
 
+	.sub {
+		.inner {
+			background: $orange;
+
+			h1 {
+				a {
+					svg {
+						color: $orange;
+					}
+				}
+			}
+		}
+	}
+
 	#visual {
 		background-color: $orange;
 
@@ -216,6 +230,20 @@ body.lightblue {
 		}
 	}
 
+	.sub {
+		.inner {
+			background: $lightblue;
+
+			h1 {
+				a {
+					svg {
+						color: $lightblue;
+					}
+				}
+			}
+		}
+	}
+
 	#visual {
 		background-color: $lightblue;
 
@@ -368,6 +396,20 @@ body.lightblue {
 
 body.lightgreen {
 	header {
+		.inner {
+			background: $lightgreen;
+
+			h1 {
+				a {
+					svg {
+						color: $lightgreen;
+					}
+				}
+			}
+		}
+	}
+
+	.sub {
 		.inner {
 			background: $lightgreen;
 

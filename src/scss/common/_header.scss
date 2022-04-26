@@ -65,3 +65,17 @@ header {
 		}
 	}
 }
+
+.sub {
+	.inner {
+		background: $orange;
+
+		h1 {
+			a {
+				svg {
+					color: $orange;
+				}
+			}
+		}
+	}
+}

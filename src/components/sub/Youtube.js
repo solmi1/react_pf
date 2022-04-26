@@ -70,15 +70,14 @@ function Youtube() {
 									const date = item.snippet.publishedAt;
 
 									return (
-										<article>
-											<div
-												key={idx}
-												onClick={() => {
-													// setOpen(true);
-													setIndex(idx);
-													pop.current.open();
-												}}
-												className='imgbox'>
+										<article
+											key={idx}
+											onClick={() => {
+												// setOpen(true);
+												setIndex(idx);
+												pop.current.open();
+											}}>
+											<div className='imgbox'>
 												<img src={item.snippet.thumbnails.maxres.url} />
 
 												<div className='sns'>
@@ -188,7 +187,7 @@ function Youtube() {
 										setIndex(idx + 2);
 										pop.current.open();
 									}}>
-									<div className='imgBox' key={idx}>
+									<div className='imgBox'>
 										<img src={item.snippet.thumbnails.medium.url} />
 									</div>
 
