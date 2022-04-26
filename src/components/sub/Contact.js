@@ -125,6 +125,7 @@ function Contact() {
 	const handleReset = () => {
 		setVal(initVal);
 		setErr({});
+		setIsSubmit(false);
 	};
 
 	useEffect(() => {
@@ -133,9 +134,7 @@ function Contact() {
 
 		if (len === 0 && isSubmit) {
 			setSuccess(true);
-			//handleReset();
-			//err값이 의존성으로 등록되어 있는 useEffect안에
-			//다시 err 스테이트를 변경하는 함수나 구문이 있으면 무한루프에 빠지니 주의
+			handleReset(true);
 		} else {
 			setSuccess(false);
 		}

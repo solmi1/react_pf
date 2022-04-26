@@ -13,11 +13,7 @@ function Visual() {
 
 	return (
 		<figure id='visual'>
-			<video
-				src={`${path}/img/Pexels Videos 2818536.mp4`}
-				autoPlay
-				loop
-				muted></video>
+			<video src={`${path}/img/main_visual.mp4`} autoPlay loop muted></video>
 
 			<div className='stay'>
 				<div className='txt'>
