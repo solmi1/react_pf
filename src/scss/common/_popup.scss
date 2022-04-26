@@ -8,16 +8,6 @@
 	background: rgba(0, 0, 0, 0.9);
 	z-index: 10;
 
-	> span {
-		font: bold 14px/1 'arial';
-		color: #ee7d31;
-		font-size: 20px;
-		cursor: pointer;
-		position: absolute;
-		top: 2vw;
-		right: 2vw;
-	}
-
 	.con {
 		width: 100%;
 		height: 100%;
@@ -33,6 +23,16 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+		}
+
+		span {
+			font: bold 14px/1 'arial';
+			color: #ee7d31;
+			font-size: 20px;
+			cursor: pointer;
+			position: absolute;
+			top: 2vw;
+			right: 2vw;
 		}
 	}
 }

@@ -1,4 +1,8 @@
 import { Route, Switch } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import * as types from './redux/actionType';
+
 import './scss/style.scss';
 
 //common 컴포넌트
@@ -23,6 +27,12 @@ import Portfolio from './components/sub/Portfolio';
 import Service from './components/sub/Service';
 
 function App() {
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch({ type: types.FLICKR.start, opt: { type: 'interest' } });
+	}, []);
+
 	return (
 		<>
 			<Switch>

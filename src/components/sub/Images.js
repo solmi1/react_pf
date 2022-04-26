@@ -9,7 +9,7 @@ function Images(props) {
 			<a href='#'>
 				<img src={`${props.path}/img/${props.imgSrc}.jpg`} />
 
-				<div class='txt'>
+				<div className='txt'>
 					<h3>Lorem, ipsum dolor.</h3>
 					<span>
 						5 <FontAwesomeIcon icon={faMessage} />

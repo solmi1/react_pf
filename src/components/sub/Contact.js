@@ -14,6 +14,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 function Contact() {
+	console.log('contact 컴포넌트 함수 호출');
 	const path = process.env.PUBLIC_URL;
 	const container = useRef(null);
 	const branch = useRef(null);
@@ -91,7 +92,6 @@ function Contact() {
 	};
 	const [val, setVal] = useState(initVal);
 	const [err, setErr] = useState({});
-	const [success, setSuccess] = useState(false);
 	const [isSubmit, setIsSubmit] = useState(false);
 
 	const check = (val) => {
@@ -133,25 +133,14 @@ function Contact() {
 		const len = Object.keys(err).length;
 
 		if (len === 0 && isSubmit) {
-			setSuccess(true);
 			handleReset(true);
-		} else {
-			setSuccess(false);
+			alert('문의주셔서 감사합니다!');
 		}
-	}, [err]);
-
-	//success 스테이트값을 의존성 배열로 해서
-	useEffect(() => {
-		//success값이 true로 변경되면
-		//기존 인풋요소 초기화
-		handleReset();
-	}, [success]);
+	});
 
 	return (
 		<>
 			<Layout name={'CONTACT'}>
-				{success ? alert('문의주셔서 감사합니다!') : null}
-
 				<div className='tit'>
 					<h1>CONTACT US</h1>
 					<p>Get it touch and let us know how we can help</p>
@@ -252,14 +241,20 @@ function Contact() {
 									</tr>
 
 									<tr>
-										<input type='reset' value='CANCEL' onClick={handleReset} />
-										<input
-											type='submit'
-											value='SEND'
-											onClick={() => {
-												setIsSubmit(true);
-											}}
-										/>
+										<th colSpan='2'>
+											<input
+												type='reset'
+												value='CANCEL'
+												onClick={handleReset}
+											/>
+											<input
+												type='submit'
+												value='SEND'
+												onClick={() => {
+													setIsSubmit(true);
+												}}
+											/>
+										</th>
 									</tr>
 								</table>
 							</fieldset>
@@ -270,14 +265,14 @@ function Contact() {
 				<div className='quick'>
 					<p>Contact</p>
 
-					<div class='sub_tit'>
+					<div className='sub_tit'>
 						<h1>
 							Quick. <br /> Support
 						</h1>
 						<p>You can get all the contact information.</p>
 					</div>
 
-					<div class='box'>
+					<div className='box'>
 						<article>
 							<FontAwesomeIcon icon={faLocationDot} />
 							<h2>Visit Us</h2>
@@ -303,8 +298,8 @@ function Contact() {
 					</div>
 				</div>
 
-				<div class='subscribe'>
-					<div class='sub_tit'>
+				<div className='subscribe'>
+					<div className='sub_tit'>
 						<h1>Subscribe</h1>
 						<p>To our newslettor</p>
 					</div>

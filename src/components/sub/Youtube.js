@@ -1,17 +1,22 @@
 import Layout from '../common/Layout';
 import Popup from '../common/Popup';
 import Images from './Images';
-import axios from 'axios';
 import { NavLink } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useRef } from 'react';
+import { useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faFacebook } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import {
+	faInstagram,
+	faTwitter,
+	faFacebook,
+} from '@fortawesome/free-brands-svg-icons';
+import {
+	faEnvelope,
+	faArrowRight,
+	faXmark,
+} from '@fortawesome/free-solid-svg-icons';
 
-function Youtube(props) {
+function Youtube() {
 	// 카테고리
 	const names = [
 		'Design',
@@ -40,23 +45,18 @@ function Youtube(props) {
 	};
 	const [posts, setPosts] = useState(getLocalData);
 
-	// 유튜브 상단
-
-	// 유튜브 하단
-	const key = 'AIzaSyBVwYJUnAqD52l07QdQxyBTARq6SOpwgmA';
-	const num = 4;
-	const id = 'PLP1K1O_EnQH9ylQZIezxV4c1B7vVKRkmj';
-	const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&maxResults=${num}&playlistId=${id}`;
-
-	const [items, setItems] = useState([]);
-	const [open, setOpen] = useState(false); //팝업 생성 유무를 관리하는 state생성
+	// 유튜브
+	const vidData = useSelector((state) => state.youtubeReducer.youtube);
+	const vids1 = vidData.slice(0, 2);
+	const vids2 = vidData.slice(2, 5);
+	const pop = useRef(null);
 	const [index, setIndex] = useState(0);
 
-	useEffect(() => {
-		axios.get(url).then((json) => {
-			setItems(json.data.items);
-		});
-	}, []);
+	// useEffect(() => {
+	// 	axios.get(url).then((json) => {
+	// 		setItems(json.data.items);
+	// 	});
+	// }, []);
 
 	return (
 		<>
@@ -65,20 +65,22 @@ function Youtube(props) {
 					<div className='left'>
 						<div>
 							<div className='imgBox'>
-								{items.map((items, idx) => {
-									const desc = items.snippet.description;
-									const date = items.snippet.publishedAt;
+								{vids1.map((item, idx) => {
+									const desc = item.snippet.description;
+									const date = item.snippet.publishedAt;
 
 									return (
 										<article>
 											<div
 												key={idx}
 												onClick={() => {
-													setOpen(true);
+													// setOpen(true);
 													setIndex(idx);
+													pop.current.open();
 												}}
 												className='imgbox'>
-												<img src={items.snippet.thumbnails.maxres.url} />
+												<img src={item.snippet.thumbnails.maxres.url} />
+
 												<div className='sns'>
 													<a href='https://www.instagram.com/' target='_blank'>
 														<FontAwesomeIcon icon={faInstagram} />
@@ -97,24 +99,25 @@ function Youtube(props) {
 
 											<table>
 												<tr>
-													<td rowspan='3'>{date.split('T')[0]}</td>
-													<td colspan='3'>{items.snippet.title}</td>
+													<td rowSpan='3'>{date.split('T')[0]}</td>
+													<td colSpan='3'>{item.snippet.title}</td>
 												</tr>
 												<tr>
-													<td colspan='3'>
+													<td colSpan='3'>
 														{desc.length > 150
 															? desc.substr(0, 200) + '...'
 															: desc}
 													</td>
 												</tr>
 												<tr>
-													<td>By {items.snippet.videoOwnerChannelTitle}</td>
+													<td>By {item.snippet.videoOwnerChannelTitle}</td>
 													<td>0 Comments</td>
 													<td
 														key={idx}
 														onClick={() => {
-															setOpen(true);
+															// setOpen(true);
 															setIndex(idx);
+															pop.current.open();
 														}}>
 														More <FontAwesomeIcon icon={faArrowRight} />
 													</td>
@@ -173,21 +176,23 @@ function Youtube(props) {
 
 				<div className='mvBox'>
 					<div className='mv'>
-						{items.map((items, idx) => {
-							const desc = items.snippet.description;
-							const date = items.snippet.publishedAt;
+						{vids2.map((item, idx) => {
+							const desc = item.snippet.description;
+							const date = item.snippet.publishedAt;
 
 							return (
 								<article
 									key={idx}
 									onClick={() => {
-										setOpen(true);
-										setIndex(idx);
+										// setOpen(true);
+										setIndex(idx + 2);
+										pop.current.open();
 									}}>
-									<div className='imgBox'>
-										<img src={items.snippet.thumbnails.medium.url} />
+									<div className='imgBox' key={idx}>
+										<img src={item.snippet.thumbnails.medium.url} />
 									</div>
-									<h2>{items.snippet.title}</h2>
+
+									<h2>{item.snippet.title}</h2>
 									<div className='txt'>
 										<p>
 											{desc.length > 50 ? desc.substr(0, 120) + '...' : desc}
@@ -201,7 +206,21 @@ function Youtube(props) {
 				</div>
 			</Layout>
 
-			{open ? (
+			<Popup ref={pop}>
+				{vidData.length !== 0 && (
+					<iframe
+						src={
+							'https://www.youtube.com/embed/' +
+							vidData[index].snippet.resourceId.videoId
+						}
+						frameBorder='0'></iframe>
+				)}
+				<span onClick={() => pop.current.close()}>
+					<FontAwesomeIcon icon={faXmark} />
+				</span>
+			</Popup>
+
+			{/* {open ? (
 				<Popup setOpen={setOpen}>
 					<iframe
 						src={
@@ -210,7 +229,7 @@ function Youtube(props) {
 						}
 						frameBorder='0'></iframe>
 				</Popup>
-			) : null}
+			) : null} */}
 		</>
 	);
 }

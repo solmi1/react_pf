@@ -1,6 +1,15 @@
 $tablet: 1179px;
 $mobile: 539px;
 
+$orange: #ee7d31;
+$orange2: rgba(238, 125, 49, 0.3);
+
+$lightblue: lightblue;
+$lightblue2: rgba(173, 216, 230, 0.3);
+
+$lightgreen: #00df70;
+$lightgreen2: rgba(0, 223, 112, 0.3);
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;700&display=swap');
 
 //common
@@ -26,3 +35,498 @@ $mobile: 539px;
 @import 'sub/contact';
 @import 'sub/portfolio';
 @import 'sub/service';
+
+body.orange {
+	header {
+		.inner {
+			background: $orange;
+
+			h1 {
+				a {
+					svg {
+						color: $orange;
+					}
+				}
+			}
+		}
+	}
+
+	#visual {
+		background-color: $orange;
+
+		&::after {
+			background-color: $orange2;
+		}
+
+		.stay {
+			&::after {
+				background-color: $orange2;
+			}
+		}
+
+		.txt {
+			h1 {
+				&::before {
+					background-color: $orange2;
+				}
+
+				&::after {
+					background-color: $orange2;
+				}
+			}
+		}
+
+		.btn {
+			background: $orange;
+
+			&:hover {
+				border: 1px solid $orange;
+				color: $orange;
+			}
+		}
+	}
+
+	#services {
+		h1 {
+			&::after {
+				background-color: $orange2;
+			}
+		}
+
+		.wrap {
+			article {
+				> svg {
+					color: $orange;
+				}
+
+				.btn {
+					background: $orange;
+
+					&:hover {
+						background-color: $orange2;
+						border: 1px solid $orange;
+						color: $orange;
+					}
+				}
+			}
+		}
+	}
+
+	#about {
+		.box {
+			&::after {
+				background-color: $orange2;
+			}
+
+			h1 {
+				&::after {
+					background-color: $orange2;
+				}
+			}
+
+			.btn {
+				background: $orange;
+
+				&:hover {
+					background-color: $orange2;
+					border: 1px solid $orange;
+					color: $orange;
+				}
+			}
+		}
+	}
+
+	#satisfied {
+		.inner {
+			article {
+				svg {
+					color: $orange;
+				}
+			}
+		}
+	}
+
+	#contact {
+		.inner {
+			h1 {
+				&::after {
+					background-color: $orange2;
+				}
+			}
+
+			.wrap {
+				article {
+					&:nth-of-type(2) {
+						.sns {
+							a {
+								background-color: $orange;
+							}
+						}
+					}
+
+					.btn {
+						background: $orange;
+
+						&:hover {
+							background-color: $orange2;
+							border: 1px solid $orange;
+							color: $orange;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#portfolio {
+		.inner {
+			.sub_tit {
+				h1 {
+					&::after {
+						background-color: $orange2;
+					}
+				}
+
+				.btn {
+					background: $orange;
+
+					&:hover {
+						background-color: $orange2;
+						border: 1px solid $orange;
+						color: $orange;
+					}
+				}
+			}
+		}
+	}
+}
+
+body.lightblue {
+	header {
+		.inner {
+			background: $lightblue;
+
+			h1 {
+				a {
+					svg {
+						color: $lightblue;
+					}
+				}
+			}
+		}
+	}
+
+	#visual {
+		background-color: $lightblue;
+
+		&::after {
+			background-color: $lightblue2;
+		}
+
+		.stay {
+			&::after {
+				background-color: $lightblue2;
+			}
+		}
+
+		.txt {
+			h1 {
+				&::before {
+					background-color: $lightblue2;
+				}
+
+				&::after {
+					background-color: $lightblue2;
+				}
+			}
+		}
+
+		.btn {
+			background: $lightblue;
+
+			&:hover {
+				border: 1px solid $lightblue;
+				color: $lightblue;
+			}
+		}
+	}
+
+	#services {
+		h1 {
+			&::after {
+				background-color: $lightblue2;
+			}
+		}
+
+		.wrap {
+			article {
+				> svg {
+					color: $lightblue;
+				}
+
+				.btn {
+					background: $lightblue;
+
+					&:hover {
+						background-color: $lightblue2;
+						border: 1px solid $lightblue;
+						color: $lightblue;
+					}
+				}
+			}
+		}
+	}
+
+	#about {
+		.box {
+			&::after {
+				background-color: $lightblue2;
+			}
+
+			h1 {
+				&::after {
+					background-color: $lightblue2;
+				}
+			}
+
+			.btn {
+				background: $lightblue;
+
+				&:hover {
+					background-color: $lightblue2;
+					border: 1px solid $lightblue;
+					color: $lightblue;
+				}
+			}
+		}
+	}
+
+	#satisfied {
+		.inner {
+			article {
+				svg {
+					color: $lightblue;
+				}
+			}
+		}
+	}
+
+	#contact {
+		.inner {
+			h1 {
+				&::after {
+					background-color: $lightblue2;
+				}
+			}
+
+			.wrap {
+				article {
+					&:nth-of-type(2) {
+						.sns {
+							a {
+								background-color: $lightblue;
+							}
+						}
+					}
+
+					.btn {
+						background: $lightblue;
+
+						&:hover {
+							background-color: $lightblue2;
+							border: 1px solid $lightblue;
+							color: $lightblue;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#portfolio {
+		.inner {
+			.sub_tit {
+				h1 {
+					&::after {
+						background-color: $lightblue2;
+					}
+				}
+
+				.btn {
+					background: $lightblue;
+
+					&:hover {
+						background-color: $lightblue2;
+						border: 1px solid $lightblue;
+						color: $lightblue;
+					}
+				}
+			}
+		}
+	}
+}
+
+body.lightgreen {
+	header {
+		.inner {
+			background: $lightgreen;
+
+			h1 {
+				a {
+					svg {
+						color: $lightgreen;
+					}
+				}
+			}
+		}
+	}
+
+	#visual {
+		background-color: $lightgreen;
+
+		&::after {
+			background-color: $lightgreen2;
+		}
+
+		.stay {
+			&::after {
+				background-color: $lightgreen2;
+			}
+		}
+
+		.txt {
+			h1 {
+				&::before {
+					background-color: $lightgreen2;
+				}
+
+				&::after {
+					background-color: $lightgreen2;
+				}
+			}
+		}
+
+		.btn {
+			background: $lightgreen;
+
+			&:hover {
+				border: 1px solid $lightgreen;
+				color: $lightgreen;
+			}
+		}
+	}
+
+	#services {
+		h1 {
+			&::after {
+				background-color: $lightgreen2;
+			}
+		}
+
+		.wrap {
+			article {
+				> svg {
+					color: $lightgreen;
+				}
+
+				.btn {
+					background: $lightgreen;
+
+					&:hover {
+						background-color: $lightgreen2;
+						border: 1px solid $lightgreen;
+						color: $lightgreen;
+					}
+				}
+			}
+		}
+	}
+
+	#about {
+		.box {
+			&::after {
+				background-color: $lightgreen2;
+			}
+
+			h1 {
+				&::after {
+					background-color: $lightgreen2;
+				}
+			}
+
+			.btn {
+				background: $lightgreen;
+
+				&:hover {
+					background-color: $lightgreen2;
+					border: 1px solid $lightgreen;
+					color: $lightgreen;
+				}
+			}
+		}
+	}
+
+	#satisfied {
+		.inner {
+			article {
+				svg {
+					color: $lightgreen;
+				}
+			}
+		}
+	}
+
+	#contact {
+		.inner {
+			h1 {
+				&::after {
+					background-color: $lightgreen2;
+				}
+			}
+
+			.wrap {
+				article {
+					&:nth-of-type(2) {
+						.sns {
+							a {
+								background-color: $lightgreen;
+							}
+						}
+					}
+
+					.btn {
+						background: $lightgreen;
+
+						&:hover {
+							background-color: $lightgreen2;
+							border: 1px solid $lightgreen;
+							color: $lightgreen;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#portfolio {
+		.inner {
+			.sub_tit {
+				h1 {
+					&::after {
+						background-color: $lightgreen2;
+					}
+				}
+
+				.btn {
+					background: $lightgreen;
+
+					&:hover {
+						background-color: $lightgreen2;
+						border: 1px solid $lightgreen;
+						color: $lightgreen;
+					}
+				}
+			}
+		}
+	}
+}

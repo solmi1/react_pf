@@ -34,7 +34,7 @@ function About() {
 	return (
 		<>
 			<Layout name={'ABOUT'}>
-				<div class='tit'>
+				<div className='tit'>
 					<h1>WE ALWAYS WORK FOR YOUR SUCCESS</h1>
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
@@ -43,9 +43,9 @@ function About() {
 					</p>
 				</div>
 
-				<div class='introduction'>
-					<div class='pic'></div>
-					<div class='txt'>
+				<div className='introduction'>
+					<div className='pic'></div>
+					<div className='txt'>
 						<h2>
 							Are you planning to take your business to the next level? Let's
 							make your website ready!
@@ -69,8 +69,8 @@ function About() {
 							possimus non perspiciatis. Impedit, itaque rem!
 						</p>
 					</div>
-					<div class='pic'></div>
-					<div class='txt'>
+					<div className='pic'></div>
+					<div className='txt'>
 						<h2>
 							Are you planning to take your business to the next level? Let's
 							make your website ready!
@@ -96,7 +96,7 @@ function About() {
 					</div>
 				</div>
 
-				<div class='service'>
+				<div className='service'>
 					<article>
 						<FontAwesomeIcon icon={faMedal} />
 						<h2>TOP QUALITY SERVICE</h2>
@@ -115,8 +115,8 @@ function About() {
 					</article>
 				</div>
 
-				<div class='process'>
-					<div class='sub_tit'>
+				<div className='process'>
+					<div className='sub_tit'>
 						<h1>PROCESS</h1>
 						<p>Three Steps Solution</p>
 					</div>
@@ -165,8 +165,8 @@ function About() {
 					})}
 				</div>
 
-				<div class='questions'>
-					<div class='sub_tit'>
+				<div className='questions'>
+					<div className='sub_tit'>
 						<h1>DO YOU HAVE ANY QUESTION?</h1>
 						<p>Feel free to request for qoote</p>
 					</div>

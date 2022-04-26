@@ -78,7 +78,7 @@ function Service() {
 							<p>PRICE</p>
 						</li>
 						<li>
-							<a href='#logo' class='on'>
+							<a href='#logo' className='on'>
 								Logo Design
 							</a>
 						</li>
@@ -99,7 +99,7 @@ function Service() {
 						</li>
 					</ul>
 
-					<div id='logo' class='on'>
+					<div id='logo' className='on'>
 						<ul>
 							<li>
 								<h2>STARTER</h2>

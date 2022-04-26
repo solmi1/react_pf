@@ -5,8 +5,8 @@ header {
 	.inner {
 		width: 100%;
 		height: 100%;
-		background: #ee7d31;
 		position: relative;
+		transition: 0.5s;
 
 		h1 {
 			display: flex;
@@ -18,8 +18,8 @@ header {
 			float: left;
 
 			a {
-				.fa-angrycreative {
-					color: #ee7d31;
+				svg {
+					transition: 0.5s;
 					font-size: 80px;
 					line-height: 120px;
 				}

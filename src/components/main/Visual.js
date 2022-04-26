@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -10,6 +10,16 @@ import { faEnvelope, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 function Visual() {
 	const path = process.env.PUBLIC_URL;
+	const [color, setColor] = useState('orange');
+
+	const handleColor = (e) => {
+		const color = e.target.innerText;
+		setColor(color);
+	};
+
+	useEffect(() => {
+		document.body.className = color;
+	}, [color]);
 
 	return (
 		<figure id='visual'>
@@ -34,9 +44,15 @@ function Visual() {
 			</div>
 
 			<div className='color'>
-				<div className='circle'></div>
-				<div className='circle'></div>
-				<div className='circle'></div>
+				<div className='orange' onClick={handleColor}>
+					orange
+				</div>
+				<div className='lightblue' onClick={handleColor}>
+					lightblue
+				</div>
+				<div className='lightgreen' onClick={handleColor}>
+					lightgreen
+				</div>
 			</div>
 
 			<div className='sns'>
