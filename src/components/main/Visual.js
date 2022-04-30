@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -10,20 +9,17 @@ import { faEnvelope, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 function Visual() {
 	const path = process.env.PUBLIC_URL;
-	const [color, setColor] = useState('orange');
-
-	const handleColor = (e) => {
-		const color = e.target.innerText;
-		setColor(color);
-	};
-
-	useEffect(() => {
-		document.body.className = color;
-	}, [color]);
 
 	return (
 		<figure id='visual'>
-			<video src={`${path}/img/main_visual.mp4`} autoPlay loop muted></video>
+			<div className='main'>
+				<p>
+					Show me what <br />
+					you like
+					<br /> and <br />I will tell you.
+				</p>
+				<video src={`${path}/img/main_visual.mp4`} autoPlay loop muted></video>
+			</div>
 
 			<div className='stay'>
 				<div className='txt'>
@@ -41,18 +37,6 @@ function Visual() {
 				<NavLink to='/board' className='btn'>
 					Learn More <FontAwesomeIcon icon={faArrowRight} />
 				</NavLink>
-			</div>
-
-			<div className='color'>
-				<div className='orange' onClick={handleColor}>
-					orange
-				</div>
-				<div className='lightblue' onClick={handleColor}>
-					lightblue
-				</div>
-				<div className='lightgreen' onClick={handleColor}>
-					lightgreen
-				</div>
 			</div>
 
 			<div className='sns'>

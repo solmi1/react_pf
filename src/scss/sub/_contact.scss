@@ -46,9 +46,7 @@
 						cursor: pointer;
 						width: calc(50% - 10px);
 						height: 40px;
-						border: 1px solid #ee7d31;
 						background: #fff;
-						color: #ee7d31;
 						display: inline-block;
 						text-align: center;
 						line-height: 40px;
@@ -60,7 +58,6 @@
 						}
 
 						&.on {
-							background: #ee7d31;
 							color: #fff;
 						}
 					}
@@ -98,9 +95,8 @@
 						width: 30px;
 						height: 30px;
 						border-radius: 50%;
-						background: #ee7d31;
+						transition: 0.5s;
 						margin-right: 15px;
-
 						text-align: center;
 						line-height: 27px;
 
@@ -176,15 +172,9 @@
 									width: calc(50% - 10px);
 									height: 60px;
 									margin-right: 20px;
-									background: #ee7d31;
+									transition: 0.5s;
 									color: #fff;
 									border: none;
-
-									&:hover {
-										background-color: rgba(238, 125, 49, 0.4);
-										border: 1px solid #ee7d31;
-										color: #ee7d31;
-									}
 								}
 
 								input[type='submit'] {

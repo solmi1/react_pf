@@ -7,6 +7,7 @@ header {
 		height: 100%;
 		position: relative;
 		transition: 0.5s;
+		overflow: hidden;
 
 		h1 {
 			display: flex;
@@ -55,6 +56,34 @@ header {
 			}
 		}
 
+		.color {
+			position: absolute;
+			right: 50px;
+			top: 50%;
+			transform: translateY(-50%);
+			text-indent: 99999px;
+			display: flex;
+
+			> div {
+				width: 20px;
+				height: 20px;
+				border: 0.5px solid #fff;
+				box-sizing: border-box;
+				cursor: pointer;
+				margin-left: 20px;
+
+				&:nth-of-type(1) {
+					background: #ee7d31;
+				}
+				&:nth-of-type(2) {
+					background: #18b4e7;
+				}
+				&:nth-of-type(3) {
+					background: #00df70;
+				}
+			}
+		}
+
 		.fa-bars {
 			cursor: pointer;
 			position: absolute;
@@ -62,6 +91,7 @@ header {
 			top: 50%;
 			transform: translateY(-50%);
 			color: #fff;
+			display: none;
 		}
 	}
 }

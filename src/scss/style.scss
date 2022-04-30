@@ -3,12 +3,15 @@ $mobile: 539px;
 
 $orange: #ee7d31;
 $orange2: rgba(238, 125, 49, 0.3);
+$orange3: rgba(238, 125, 49, 0.7);
 
-$lightblue: lightblue;
-$lightblue2: rgba(173, 216, 230, 0.3);
+$lightblue: #18b4e7;
+$lightblue2: rgba(24, 180, 231, 0.3);
+$lightblue3: rgba(24, 180, 231, 0.7);
 
 $lightgreen: #00df70;
 $lightgreen2: rgba(0, 223, 112, 0.3);
+$lightgreen3: rgba(0, 223, 112, 0.7);
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;700&display=swap');
 
@@ -70,6 +73,13 @@ body.orange {
 
 		&::after {
 			background-color: $orange2;
+		}
+
+		.main {
+			p {
+				color: $orange;
+				position: absolute;
+			}
 		}
 
 		.stay {
@@ -213,6 +223,363 @@ body.orange {
 			}
 		}
 	}
+
+	.content {
+		.sub_visual {
+			h1 {
+				&::after {
+					background-color: $orange2;
+				}
+			}
+		}
+	}
+
+	.SERVICE {
+		.inner {
+			article {
+				&::after {
+					background-color: $orange2;
+				}
+			}
+
+			#plan {
+				.btns {
+					li {
+						p {
+							color: $orange;
+						}
+
+						a {
+							&.on {
+								background: $orange;
+							}
+						}
+					}
+				}
+
+				div {
+					ul {
+						li {
+							p {
+								color: $orange;
+							}
+
+							strong {
+								color: $orange;
+							}
+						}
+					}
+				}
+			}
+
+			.btn {
+				background-color: $orange;
+
+				&:hover {
+					background-color: $orange2;
+					border: 1px solid $orange;
+					color: $orange;
+				}
+			}
+		}
+	}
+
+	.ABOUT {
+		.inner {
+			svg {
+				color: $orange;
+			}
+
+			.introduction {
+				.pic {
+					&::after {
+						background: $orange2;
+					}
+				}
+			}
+
+			.member {
+				article {
+					.box {
+						.sns {
+							background: $orange3;
+						}
+					}
+				}
+			}
+
+			.questions {
+				a {
+					background: $orange;
+
+					&:hover {
+						background-color: $orange2;
+						border: 1px solid $orange;
+						color: $orange;
+
+						> svg {
+							color: $orange;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.CONTACT {
+		.inner {
+			.con {
+				.maps {
+					.branch {
+						li {
+							border: 1px solid $orange;
+							color: $orange;
+
+							&.on {
+								background: $orange;
+								color: #fff;
+							}
+						}
+					}
+				}
+
+				.formBox {
+					.sns {
+						a {
+							background: $orange;
+						}
+					}
+
+					form {
+						fieldset {
+							table {
+								tr {
+									td {
+										input[type='reset'],
+										input[type='submit'] {
+											background: $orange;
+
+											&:hover {
+												background-color: $orange2;
+												border: 1px solid $orange;
+												color: $orange;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.subscribe {
+				form {
+					fieldset {
+						table {
+							tr {
+								input[type='submit'] {
+									background: $lightgreen;
+
+									&:hover {
+										background-color: $lightgreen2;
+										border: 1px solid $lightgreen;
+										color: $lightgreen;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.PORTFOLIO {
+		.topBtns {
+			> button {
+				background: $orange;
+			}
+			.searchBox {
+				input {
+					border: 1px solid $orange;
+				}
+
+				button {
+					background: $orange;
+				}
+			}
+		}
+
+		.frame {
+			div {
+				article {
+					.box {
+						&::after {
+							background: $orange2;
+						}
+
+						> p {
+							svg {
+								color: $orange;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.YOUTUBE {
+		.inner {
+			.top {
+				.left {
+					article {
+						.imgbox {
+							.sns {
+								background: $orange2;
+							}
+						}
+						table {
+							tr {
+								&:last-child {
+									td {
+										a {
+											&:hover {
+												color: $orange;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.right {
+					.sec {
+						&::after {
+							background: $orange2;
+						}
+					}
+
+					.cartegories {
+						ul {
+							li {
+								color: $orange;
+							}
+						}
+					}
+
+					.post {
+						a {
+							&::after {
+								background: $orange2;
+							}
+
+							.txt {
+								span {
+									.fa-message,
+									.fa-heart {
+										color: $orange;
+									}
+								}
+							}
+						}
+					}
+
+					.notice {
+						ul {
+							li {
+								color: $orange;
+							}
+						}
+					}
+				}
+			}
+
+			.mvBox {
+				.mv {
+					article {
+						.txt {
+							p {
+								&::after {
+									background: $orange3;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.NOTICE {
+		.inner {
+			.btns {
+				li {
+					border: 1px solid $orange;
+
+					a {
+						color: $orange;
+
+						&.on {
+							background: $orange;
+							color: #fff;
+						}
+					}
+				}
+			}
+
+			.box {
+				input {
+					border: 1px solid $orange;
+				}
+
+				textarea {
+					border: 1px solid $orange;
+				}
+
+				.btns {
+					button {
+						background: $orange;
+					}
+				}
+			}
+
+			#faq {
+				article {
+					h2 {
+						color: $orange3;
+					}
+
+					.btns {
+						button {
+							color: $orange;
+						}
+					}
+
+					div {
+						.rebox {
+							input {
+								border: 1px solid $orange;
+							}
+
+							textarea {
+								border: 1px solid $orange;
+							}
+						}
+
+						.btns_re {
+							button {
+								background: $orange;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 body.lightblue {
@@ -249,6 +616,13 @@ body.lightblue {
 
 		&::after {
 			background-color: $lightblue2;
+		}
+
+		.main {
+			p {
+				color: $lightblue;
+				position: absolute;
+			}
 		}
 
 		.stay {
@@ -392,6 +766,363 @@ body.lightblue {
 			}
 		}
 	}
+
+	.content {
+		.sub_visual {
+			h1 {
+				&::after {
+					background-color: $lightblue2;
+				}
+			}
+		}
+	}
+
+	.SERVICE {
+		.inner {
+			article {
+				&::after {
+					background-color: $lightblue2;
+				}
+			}
+
+			#plan {
+				.btns {
+					li {
+						p {
+							color: $lightblue;
+						}
+
+						a {
+							&.on {
+								background: $lightblue;
+							}
+						}
+					}
+				}
+
+				div {
+					ul {
+						li {
+							p {
+								color: $lightblue;
+							}
+
+							strong {
+								color: $lightblue;
+							}
+						}
+					}
+				}
+			}
+
+			.btn {
+				background-color: $lightblue;
+
+				&:hover {
+					background-color: $lightblue2;
+					border: 1px solid $lightblue;
+					color: $lightblue;
+				}
+			}
+		}
+	}
+
+	.ABOUT {
+		.inner {
+			svg {
+				color: $lightblue;
+			}
+
+			.introduction {
+				.pic {
+					&::after {
+						background: $lightblue2;
+					}
+				}
+			}
+
+			.member {
+				article {
+					.box {
+						.sns {
+							background: $lightblue3;
+						}
+					}
+				}
+			}
+
+			.questions {
+				a {
+					background: $lightblue;
+
+					&:hover {
+						background-color: $lightblue2;
+						border: 1px solid $lightblue;
+						color: $lightblue;
+
+						> svg {
+							color: $lightblue;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.CONTACT {
+		.inner {
+			.con {
+				.maps {
+					.branch {
+						li {
+							border: 1px solid $lightblue;
+							color: $lightblue;
+
+							&.on {
+								background: $lightblue;
+								color: #fff;
+							}
+						}
+					}
+				}
+
+				.formBox {
+					.sns {
+						a {
+							background: $lightblue;
+						}
+					}
+
+					form {
+						fieldset {
+							table {
+								tr {
+									td {
+										input[type='reset'],
+										input[type='submit'] {
+											background: $lightblue;
+
+											&:hover {
+												background-color: $lightblue2;
+												border: 1px solid $lightblue;
+												color: $lightblue;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.subscribe {
+				form {
+					fieldset {
+						table {
+							tr {
+								input[type='submit'] {
+									background: $lightblue;
+
+									&:hover {
+										background-color: $lightblue2;
+										border: 1px solid $lightblue;
+										color: $lightblue;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.PORTFOLIO {
+		.topBtns {
+			> button {
+				background: $lightblue;
+			}
+			.searchBox {
+				input {
+					border: 1px solid $lightblue;
+				}
+
+				button {
+					background: $lightblue;
+				}
+			}
+		}
+
+		.frame {
+			div {
+				article {
+					.box {
+						&::after {
+							background: $lightblue2;
+						}
+
+						> p {
+							svg {
+								color: $lightblue;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.YOUTUBE {
+		.inner {
+			.top {
+				.left {
+					article {
+						.imgbox {
+							.sns {
+								background: $lightblue2;
+							}
+						}
+						table {
+							tr {
+								&:last-child {
+									td {
+										a {
+											&:hover {
+												color: $lightblue;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.right {
+					.sec {
+						&::after {
+							background: $lightblue2;
+						}
+					}
+
+					.cartegories {
+						ul {
+							li {
+								color: $lightblue;
+							}
+						}
+					}
+
+					.post {
+						a {
+							&::after {
+								background: $lightblue2;
+							}
+
+							.txt {
+								span {
+									.fa-message,
+									.fa-heart {
+										color: $lightblue;
+									}
+								}
+							}
+						}
+					}
+
+					.notice {
+						ul {
+							li {
+								color: $lightblue;
+							}
+						}
+					}
+				}
+			}
+
+			.mvBox {
+				.mv {
+					article {
+						.txt {
+							p {
+								&::after {
+									background: $lightblue3;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.NOTICE {
+		.inner {
+			.btns {
+				li {
+					border: 1px solid $lightblue;
+
+					a {
+						color: $lightblue;
+
+						&.on {
+							background: $lightblue;
+							color: #fff;
+						}
+					}
+				}
+			}
+
+			.box {
+				input {
+					border: 1px solid $lightblue;
+				}
+
+				textarea {
+					border: 1px solid $lightblue;
+				}
+
+				.btns {
+					button {
+						background: $lightblue;
+					}
+				}
+			}
+
+			#faq {
+				article {
+					h2 {
+						color: $lightblue3;
+					}
+
+					.btns {
+						button {
+							color: $lightblue;
+						}
+					}
+
+					div {
+						.rebox {
+							input {
+								border: 1px solid $lightblue;
+							}
+
+							textarea {
+								border: 1px solid $lightblue;
+							}
+						}
+
+						.btns_re {
+							button {
+								background: $lightblue;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 body.lightgreen {
@@ -428,6 +1159,13 @@ body.lightgreen {
 
 		&::after {
 			background-color: $lightgreen2;
+		}
+
+		.main {
+			p {
+				color: $lightgreen;
+				position: absolute;
+			}
 		}
 
 		.stay {
@@ -566,6 +1304,363 @@ body.lightgreen {
 						background-color: $lightgreen2;
 						border: 1px solid $lightgreen;
 						color: $lightgreen;
+					}
+				}
+			}
+		}
+	}
+
+	.content {
+		.sub_visual {
+			h1 {
+				&::after {
+					background-color: $lightgreen2;
+				}
+			}
+		}
+	}
+
+	.SERVICE {
+		.inner {
+			article {
+				&::after {
+					background-color: $lightgreen2;
+				}
+			}
+
+			#plan {
+				.btns {
+					li {
+						p {
+							color: $lightgreen;
+						}
+
+						a {
+							&.on {
+								background: $lightgreen;
+							}
+						}
+					}
+				}
+
+				div {
+					ul {
+						li {
+							p {
+								color: $lightgreen;
+							}
+
+							strong {
+								color: $lightgreen;
+							}
+						}
+					}
+				}
+			}
+
+			.btn {
+				background-color: $lightgreen;
+
+				&:hover {
+					background-color: $lightgreen2;
+					border: 1px solid $lightgreen;
+					color: $lightgreen;
+				}
+			}
+		}
+	}
+
+	.ABOUT {
+		.inner {
+			svg {
+				color: $lightgreen;
+			}
+
+			.introduction {
+				.pic {
+					&::after {
+						background: $lightgreen2;
+					}
+				}
+			}
+
+			.member {
+				article {
+					.box {
+						.sns {
+							background: $lightgreen3;
+						}
+					}
+				}
+			}
+
+			.questions {
+				a {
+					background: $lightgreen;
+
+					&:hover {
+						background-color: $lightgreen2;
+						border: 1px solid $lightgreen;
+						color: $lightgreen;
+
+						> svg {
+							color: $lightgreen;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.CONTACT {
+		.inner {
+			.con {
+				.maps {
+					.branch {
+						li {
+							border: 1px solid $lightgreen;
+							color: $lightgreen;
+
+							&.on {
+								background: $lightgreen;
+								color: #fff;
+							}
+						}
+					}
+				}
+
+				.formBox {
+					.sns {
+						a {
+							background: $lightgreen;
+						}
+					}
+
+					form {
+						fieldset {
+							table {
+								tr {
+									td {
+										input[type='reset'],
+										input[type='submit'] {
+											background: $lightgreen;
+
+											&:hover {
+												background-color: $lightgreen2;
+												border: 1px solid $lightgreen;
+												color: $lightgreen;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.subscribe {
+				form {
+					fieldset {
+						table {
+							tr {
+								input[type='submit'] {
+									background: $lightgreen;
+
+									&:hover {
+										background-color: $lightgreen2;
+										border: 1px solid $lightgreen;
+										color: $lightgreen;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.PORTFOLIO {
+		.topBtns {
+			> button {
+				background: $lightgreen;
+			}
+			.searchBox {
+				input {
+					border: 1px solid $lightgreen;
+				}
+
+				button {
+					background: $lightgreen;
+				}
+			}
+		}
+
+		.frame {
+			div {
+				article {
+					.box {
+						&::after {
+							background: $lightgreen2;
+						}
+
+						> p {
+							svg {
+								color: $lightgreen;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.YOUTUBE {
+		.inner {
+			.top {
+				.left {
+					article {
+						.imgbox {
+							.sns {
+								background: $lightgreen2;
+							}
+						}
+						table {
+							tr {
+								&:last-child {
+									td {
+										a {
+											&:hover {
+												color: $lightgreen;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.right {
+					.sec {
+						&::after {
+							background: $lightgreen2;
+						}
+					}
+
+					.cartegories {
+						ul {
+							li {
+								color: $lightgreen;
+							}
+						}
+					}
+
+					.post {
+						a {
+							&::after {
+								background: $lightgreen2;
+							}
+
+							.txt {
+								span {
+									.fa-message,
+									.fa-heart {
+										color: $lightgreen;
+									}
+								}
+							}
+						}
+					}
+
+					.notice {
+						ul {
+							li {
+								color: $lightgreen;
+							}
+						}
+					}
+				}
+			}
+
+			.mvBox {
+				.mv {
+					article {
+						.txt {
+							p {
+								&::after {
+									background: $lightgreen3;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.NOTICE {
+		.inner {
+			.btns {
+				li {
+					border: 1px solid $lightgreen;
+
+					a {
+						color: $lightgreen;
+
+						&.on {
+							background: $lightgreen;
+							color: #fff;
+						}
+					}
+				}
+			}
+
+			.box {
+				input {
+					border: 1px solid $lightgreen;
+				}
+
+				textarea {
+					border: 1px solid $lightgreen;
+				}
+
+				.btns {
+					button {
+						background: $lightgreen;
+					}
+				}
+			}
+
+			#faq {
+				article {
+					h2 {
+						color: $lightgreen3;
+					}
+
+					.btns {
+						button {
+							color: $lightgreen;
+						}
+					}
+
+					div {
+						.rebox {
+							input {
+								border: 1px solid $lightgreen;
+							}
+
+							textarea {
+								border: 1px solid $lightgreen;
+							}
+						}
+
+						.btns_re {
+							button {
+								background: $lightgreen;
+							}
+						}
 					}
 				}
 			}

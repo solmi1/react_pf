@@ -21,7 +21,7 @@
 
 		svg {
 			font-size: 40px;
-			color: #ee7d31;
+			transition: 0.5s;
 			margin-bottom: 25px;
 		}
 
@@ -55,7 +55,7 @@
 					display: block;
 					width: 40px;
 					height: 100%;
-					background: rgba(238, 125, 49, 0.5);
+					transition: 0.5s;
 					float: right;
 				}
 			}
@@ -180,7 +180,7 @@
 						float: left;
 						width: 20%;
 						height: 100%;
-						background: rgba(238, 125, 49, 0.7);
+						transition: 0.5s;
 						display: flex;
 						flex-direction: column;
 						justify-content: center;
@@ -220,7 +220,7 @@
 				margin: 0 auto;
 				width: 250px;
 				height: 70px;
-				background: #ee7d31;
+				transition: 0.5s;
 				color: #fff;
 				text-align: center;
 				font: 500 14px/70px 'Roboto';
@@ -236,12 +236,10 @@
 				}
 
 				&:hover {
-					background-color: rgba(238, 125, 49, 0.4);
-					border: 1px solid #ee7d31;
-					color: #ee7d31;
+					transition: 0.5s;
 
 					> svg {
-						color: #ee7d31;
+						transition: 0.5s;
 					}
 				}
 			}

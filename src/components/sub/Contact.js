@@ -188,73 +188,76 @@ function Contact() {
 
 								<table>
 									<caption>문의사항 입력</caption>
-									<tr>
-										<th scope='row'>
-											<label htmlFor='name'>Name</label>
-										</th>
-										<td>
-											<input
-												type='text'
-												name='name'
-												id='name'
-												placeholder='Your Name'
-												value={val.name}
-												onChange={handleChange}
-											/>
-											<span className='err'>{err.name}</span>
-										</td>
-									</tr>
 
-									<tr>
-										<th scope='row'>
-											<label htmlFor='email'>E-MAIL</label>
-										</th>
-										<td>
-											<input
-												type='text'
-												name='email'
-												id='email'
-												placeholder='Your Email'
-												value={val.email}
-												onChange={handleChange}
-											/>
-											<span className='err'>{err.email}</span>
-										</td>
-									</tr>
+									<tbody>
+										<tr>
+											<th scope='row'>
+												<label htmlFor='name'>Name</label>
+											</th>
+											<td>
+												<input
+													type='text'
+													name='name'
+													id='name'
+													placeholder='Your Name'
+													value={val.name}
+													onChange={handleChange}
+												/>
+												<span className='err'>{err.name}</span>
+											</td>
+										</tr>
 
-									<tr>
-										<th scope='row'>
-											<label htmlFor='comments'>COMMENTS</label>
-										</th>
-										<td>
-											<textarea
-												name='comments'
-												id='comments'
-												placeholder='Your Request'
-												cols='30'
-												rows='10'
-												value={val.comments}
-												onChange={handleChange}></textarea>
-											<span className='err'>{err.comments}</span>
-										</td>
-									</tr>
+										<tr>
+											<th scope='row'>
+												<label htmlFor='email'>E-MAIL</label>
+											</th>
+											<td>
+												<input
+													type='text'
+													name='email'
+													id='email'
+													placeholder='Your Email'
+													value={val.email}
+													onChange={handleChange}
+												/>
+												<span className='err'>{err.email}</span>
+											</td>
+										</tr>
 
-									<tr>
-										<td colSpan='2'>
-											<input
-												type='reset'
-												value='CANCEL'
-												onClick={handleReset}
-											/>
-											<input
-												type='submit'
-												value='SEND'
-												onClick={() => {
-													setIsSubmit(true);
-												}}
-											/>
-										</td>
-									</tr>
+										<tr>
+											<th scope='row'>
+												<label htmlFor='comments'>COMMENTS</label>
+											</th>
+											<td>
+												<textarea
+													name='comments'
+													id='comments'
+													placeholder='Your Request'
+													cols='30'
+													rows='10'
+													value={val.comments}
+													onChange={handleChange}></textarea>
+												<span className='err'>{err.comments}</span>
+											</td>
+										</tr>
+
+										<tr>
+											<td colSpan='2'>
+												<input
+													type='reset'
+													value='CANCEL'
+													onClick={handleReset}
+												/>
+												<input
+													type='submit'
+													value='SEND'
+													onClick={() => {
+														setIsSubmit(true);
+													}}
+												/>
+											</td>
+										</tr>
+									</tbody>
 								</table>
 							</fieldset>
 						</form>
@@ -310,42 +313,44 @@ function Contact() {
 
 							<table>
 								<caption>뉴스레터 정보 입력</caption>
-								<tr>
-									<td>
-										<input
-											type='text'
-											name='name'
-											id='name'
-											placeholder='Your Name'
-											value={val.name}
-											onChange={handleChange}
-										/>
-										<span className='err'>{err.name}</span>
-									</td>
-									<td>
-										<input
-											type='text'
-											name='email'
-											id='email'
-											placeholder='Your Email'
-											value={val.email}
-											onChange={handleChange}
-										/>
-										<span className='err'>{err.email}</span>
-									</td>
-								</tr>
+								<tbody>
+									<tr>
+										<td>
+											<input
+												type='text'
+												name='name'
+												id='name'
+												placeholder='Your Name'
+												value={val.name}
+												onChange={handleChange}
+											/>
+											<span className='err'>{err.name}</span>
+										</td>
+										<td>
+											<input
+												type='text'
+												name='email'
+												id='email'
+												placeholder='Your Email'
+												value={val.email}
+												onChange={handleChange}
+											/>
+											<span className='err'>{err.email}</span>
+										</td>
+									</tr>
 
-								<tr>
-									<td colSpan={2}>
-										<input
-											type='submit'
-											value='Subscribe to the newsletter'
-											onClick={() => {
-												setIsSubmit(true);
-											}}
-										/>
-									</td>
-								</tr>
+									<tr>
+										<td colSpan={2}>
+											<input
+												type='submit'
+												value='Subscribe to the newsletter'
+												onClick={() => {
+													setIsSubmit(true);
+												}}
+											/>
+										</td>
+									</tr>
+								</tbody>
 							</table>
 						</fieldset>
 					</form>

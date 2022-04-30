@@ -6,6 +6,18 @@ import { faAngrycreative } from '@fortawesome/free-brands-svg-icons';
 import Menu from './Menu';
 
 function Header(props) {
+	// 테마 컬러변경
+	const [color, setColor] = useState('orange');
+
+	const handleColor = (e) => {
+		const color = e.target.innerText;
+		setColor(color);
+	};
+
+	useEffect(() => {
+		document.body.className = color;
+	}, [color]);
+
 	const [opened, setOpened] = useState(false);
 	const menu = useRef(null);
 
@@ -43,6 +55,18 @@ function Header(props) {
 							<NavLink to='/board'>BOARD</NavLink>
 						</li>
 					</ul>
+
+					<div className='color'>
+						<div className='orange' onClick={handleColor}>
+							orange
+						</div>
+						<div className='lightblue' onClick={handleColor}>
+							lightblue
+						</div>
+						<div className='lightgreen' onClick={handleColor}>
+							lightgreen
+						</div>
+					</div>
 
 					<FontAwesomeIcon
 						icon={faBars}

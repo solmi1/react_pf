@@ -132,8 +132,6 @@ function Board() {
 
 	return (
 		<Layout name={'NOTICE'}>
-			{/* <h1>FAQ's</h1> */}
-
 			<div className='box'>
 				<input type='text' placeholder='제목을 입력하세요.' ref={input} />
 				<br />
