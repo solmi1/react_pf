@@ -18,8 +18,8 @@ function Portfolio() {
 	const input = useRef(null);
 	// 팝업 컴포넌트 참조
 	const pop = useRef(null);
-
 	const [index, setIndex] = useState(0);
+
 	// const [items, setItems] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [enableClick, setEnableClick] = useState(true);

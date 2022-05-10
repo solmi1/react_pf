@@ -154,7 +154,7 @@ function Board() {
 							{post.enableUpdate ? (
 								//수정모드
 								<>
-									<h2>{idx + 1}</h2>
+									<h2>{1 + idx}</h2>
 									<div>
 										<div className='rebox'>
 											<input
@@ -178,7 +178,7 @@ function Board() {
 							) : (
 								//출력모드
 								<>
-									<h2>{idx + 1}</h2>
+									<h2>{1 + idx}</h2>
 									<div className='txt'>
 										<h3>{post.title}</h3>
 										<p>{post.content}</p>
