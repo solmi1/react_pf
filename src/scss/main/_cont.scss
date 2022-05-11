@@ -90,3 +90,42 @@
 		}
 	}
 }
+
+@media screen and (max-width: $tablet) {
+	#contact {
+		margin-bottom: 100px;
+
+		.inner {
+			width: 100%;
+			padding: 0 30px;
+
+			h1 {
+				text-align: center;
+				margin-right: 0;
+
+				&::after {
+					right: 50%;
+					transform: translateX(50%);
+				}
+			}
+
+			.wrap {
+				display: flex;
+				justify-content: space-around;
+
+				article {
+					p {
+						text-align: left;
+						margin-bottom: 30px;
+						font: 12px/1.2 'Montserrat';
+						color: #aaa;
+					}
+
+					&:nth-of-type(2) {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

@@ -45,3 +45,23 @@
 		}
 	}
 }
+
+@media screen and (max-width: $tablet) {
+	#satisfied {
+		margin: 100px auto;
+
+		.inner {
+			width: 100%;
+			margin: 0 auto;
+
+			article {
+				margin: 0 auto;
+				float: none;
+
+				&:last-child {
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+}

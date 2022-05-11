@@ -68,6 +68,24 @@ body.orange {
 		}
 	}
 
+	nav {
+		#gnb {
+			li {
+				border-bottom: 1px solid $orange;
+
+				a {
+					color: lightsalmon;
+				}
+			}
+		}
+
+		.sns {
+			a {
+				color: $orange;
+			}
+		}
+	}
+
 	#visual {
 		background-color: $orange;
 
@@ -218,6 +236,34 @@ body.orange {
 						background-color: $orange2;
 						border: 1px solid $orange;
 						color: $orange;
+					}
+				}
+			}
+		}
+
+		.mySwiper {
+			.swiper-scrollbar {
+				.swiper-scrollbar-drag {
+					background: $orange3;
+				}
+			}
+
+			.swiper-wrapper {
+				.swiper-slide {
+					.pic {
+						.more {
+							p {
+								svg {
+									color: $orange;
+								}
+							}
+						}
+
+						&:hover {
+							&::after {
+								background: $orange2;
+							}
+						}
 					}
 				}
 			}
@@ -437,7 +483,7 @@ body.orange {
 					article {
 						.imgbox {
 							.sns {
-								background: $orange2;
+								background: $orange3;
 							}
 						}
 						table {
@@ -459,7 +505,7 @@ body.orange {
 				.right {
 					.sec {
 						&::after {
-							background: $orange2;
+							background: $orange3;
 						}
 					}
 
@@ -474,7 +520,7 @@ body.orange {
 					.post {
 						a {
 							&::after {
-								background: $orange2;
+								background: $orange3;
 							}
 
 							.txt {
@@ -580,6 +626,14 @@ body.orange {
 			}
 		}
 	}
+
+	.popup {
+		.con {
+			span {
+				color: $orange;
+			}
+		}
+	}
 }
 
 body.lightblue {
@@ -607,6 +661,24 @@ body.lightblue {
 						color: $lightblue;
 					}
 				}
+			}
+		}
+	}
+
+	nav {
+		#gnb {
+			li {
+				border-bottom: 1px solid $lightblue;
+
+				a {
+					color: rgb(140, 198, 217);
+				}
+			}
+		}
+
+		.sns {
+			a {
+				color: $lightblue;
 			}
 		}
 	}
@@ -761,6 +833,34 @@ body.lightblue {
 						background-color: $lightblue2;
 						border: 1px solid $lightblue;
 						color: $lightblue;
+					}
+				}
+			}
+		}
+
+		.mySwiper {
+			.swiper-scrollbar {
+				.swiper-scrollbar-drag {
+					background: $lightblue3;
+				}
+			}
+
+			.swiper-wrapper {
+				.swiper-slide {
+					.pic {
+						.more {
+							p {
+								svg {
+									color: $lightblue;
+								}
+							}
+						}
+
+						&:hover {
+							&::after {
+								background: $lightblue2;
+							}
+						}
 					}
 				}
 			}
@@ -980,7 +1080,7 @@ body.lightblue {
 					article {
 						.imgbox {
 							.sns {
-								background: $lightblue2;
+								background: $lightblue3;
 							}
 						}
 						table {
@@ -1002,7 +1102,7 @@ body.lightblue {
 				.right {
 					.sec {
 						&::after {
-							background: $lightblue2;
+							background: $lightblue3;
 						}
 					}
 
@@ -1017,7 +1117,7 @@ body.lightblue {
 					.post {
 						a {
 							&::after {
-								background: $lightblue2;
+								background: $lightblue3;
 							}
 
 							.txt {
@@ -1123,6 +1223,14 @@ body.lightblue {
 			}
 		}
 	}
+
+	.popup {
+		.con {
+			span {
+				color: $lightblue;
+			}
+		}
+	}
 }
 
 body.lightgreen {
@@ -1150,6 +1258,24 @@ body.lightgreen {
 						color: $lightgreen;
 					}
 				}
+			}
+		}
+	}
+
+	nav {
+		#gnb {
+			li {
+				border-bottom: 1px solid $lightgreen;
+
+				a {
+					color: lightgreen;
+				}
+			}
+		}
+
+		.sns {
+			a {
+				color: $lightgreen;
 			}
 		}
 	}
@@ -1304,6 +1430,34 @@ body.lightgreen {
 						background-color: $lightgreen2;
 						border: 1px solid $lightgreen;
 						color: $lightgreen;
+					}
+				}
+			}
+		}
+
+		.mySwiper {
+			.swiper-scrollbar {
+				.swiper-scrollbar-drag {
+					background: $lightgreen3;
+				}
+			}
+
+			.swiper-wrapper {
+				.swiper-slide {
+					.pic {
+						.more {
+							p {
+								svg {
+									color: $lightgreen;
+								}
+							}
+						}
+
+						&:hover {
+							&::after {
+								background: $lightgreen2;
+							}
+						}
 					}
 				}
 			}
@@ -1523,7 +1677,7 @@ body.lightgreen {
 					article {
 						.imgbox {
 							.sns {
-								background: $lightgreen2;
+								background: $lightgreen3;
 							}
 						}
 						table {
@@ -1545,7 +1699,7 @@ body.lightgreen {
 				.right {
 					.sec {
 						&::after {
-							background: $lightgreen2;
+							background: $lightgreen3;
 						}
 					}
 
@@ -1560,7 +1714,7 @@ body.lightgreen {
 					.post {
 						a {
 							&::after {
-								background: $lightgreen2;
+								background: $lightgreen3;
 							}
 
 							.txt {
@@ -1662,6 +1816,103 @@ body.lightgreen {
 							}
 						}
 					}
+				}
+			}
+		}
+	}
+
+	.popup {
+		.con {
+			span {
+				color: $lightgreen;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	body.orange {
+		header {
+			.inner {
+				h1 {
+					background: $orange;
+				}
+			}
+		}
+
+		#visual {
+			.btn {
+				background-color: rgba(0, 0, 0, 0);
+
+				&:hover {
+					border: none;
+					color: $orange;
+				}
+			}
+		}
+
+		#about {
+			.box {
+				.btn {
+					background: rgba(255, 255, 255, 0);
+				}
+			}
+		}
+	}
+
+	body.lightblue {
+		header {
+			.inner {
+				h1 {
+					background: $lightblue;
+				}
+			}
+		}
+
+		#visual {
+			.btn {
+				background-color: rgba(0, 0, 0, 0);
+
+				&:hover {
+					border: none;
+					color: $lightblue;
+				}
+			}
+		}
+
+		#about {
+			.box {
+				.btn {
+					background: rgba(255, 255, 255, 0);
+				}
+			}
+		}
+	}
+
+	body.lightgreen {
+		header {
+			.inner {
+				h1 {
+					background: $lightgreen;
+				}
+			}
+		}
+
+		#visual {
+			.btn {
+				background-color: rgba(0, 0, 0, 0);
+
+				&:hover {
+					border: none;
+					color: $lightgreen;
+				}
+			}
+		}
+
+		#about {
+			.box {
+				.btn {
+					background: rgba(255, 255, 255, 0);
 				}
 			}
 		}

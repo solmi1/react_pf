@@ -109,3 +109,42 @@ header {
 		}
 	}
 }
+
+@media screen and (max-width: $tablet) {
+	header {
+		height: 100px;
+
+		.inner {
+			h1 {
+				width: 100%;
+				transition: 0.5s;
+
+				a {
+					svg {
+						color: #fff !important;
+						line-height: 100px;
+					}
+				}
+			}
+
+			#gnb {
+				display: none;
+			}
+
+			.color {
+				right: 0;
+				left: 30px;
+
+				> div {
+					width: 15px;
+					height: 15px;
+					margin-left: 15px;
+				}
+			}
+
+			.fa-bars {
+				display: block;
+			}
+		}
+	}
+}

@@ -1,9 +1,11 @@
 import Layout from '../common/Layout';
 import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-function Service() {
+function Service(props) {
 	return (
 		<>
 			<Layout name={'SERVICE'}>
@@ -78,9 +80,7 @@ function Service() {
 							<p>PRICE</p>
 						</li>
 						<li>
-							<a href='#logo' className='on'>
-								Logo Design
-							</a>
+							<a href='#logo'>Logo Design</a>
 						</li>
 						<li>
 							<a href='#banner'>Banner Design</a>

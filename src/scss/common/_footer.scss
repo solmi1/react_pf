@@ -14,3 +14,13 @@ footer {
 		}
 	}
 }
+
+@media screen and (max-width: $tablet) {
+	footer {
+		margin-bottom: 50px;
+
+		.inner {
+			width: 100%;
+		}
+	}
+}

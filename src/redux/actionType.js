@@ -3,3 +3,9 @@ export const FLICKR = {
 	success: 'FLICKR_SUCCESS',
 	error: 'FLICKR_ERROR',
 };
+
+export const YOUTUBE = {
+	start: 'YOUTUBE_START',
+	success: 'YOUTUBE_SUCCESS',
+	error: 'YOUTUBE_ERROR',
+};

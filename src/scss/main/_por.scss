@@ -140,3 +140,41 @@
 		}
 	}
 }
+
+@media screen and (max-width: $tablet) {
+	#portfolio {
+		margin-bottom: 100px;
+		position: relative;
+
+		.inner {
+			width: 100%;
+			padding: 0 30px;
+
+			.sub_tit {
+				width: 100%;
+				float: none;
+
+				h1 {
+					text-align: center;
+
+					&::after {
+						left: 50%;
+						transform: translateX(-50%);
+					}
+				}
+
+				p {
+					text-align: center;
+				}
+
+				.btn {
+					display: none;
+				}
+			}
+
+			.mySwiper {
+				width: 100%;
+			}
+		}
+	}
+}
