@@ -4,6 +4,7 @@
 		height: 350px;
 		background: url(./../../../public/img/sub_visual.jpg);
 		padding: 200px 300px 0;
+		transition: 0.5s;
 
 		h1 {
 			font: 400 50px/1 'Montserrat';
@@ -51,8 +52,34 @@
 @media screen and (max-width: $tablet) {
 	.content {
 		.sub_visual {
+			background: rgba(238, 125, 49, 0.9);
+			height: 100%;
+			padding: 0;
+
+			h1 {
+				font: 400 18px/2 'Montserrat';
+				text-align: center;
+				display: block;
+				color: #fff;
+
+				&::after {
+					display: none;
+				}
+
+				&:hover ~ .cursor {
+					display: none;
+				}
+			}
+		}
+
+		.inner {
 			width: 100%;
-			padding: 100px 30px;
+			margin: 100px auto;
+			padding: 0 30px;
+		}
+
+		.cursor {
+			opacity: 0;
 		}
 	}
 }
