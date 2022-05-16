@@ -186,3 +186,20 @@
 		}
 	}
 }
+
+@media screen and (max-width: $mobile) {
+	#visual {
+		height: calc(100vh - 80px);
+
+		.stay {
+			width: 80%;
+			transform: translate(-45%, -50%);
+			padding: 0 20px;
+
+			&::after {
+				width: 30px;
+				left: -30px;
+			}
+		}
+	}
+}

@@ -148,3 +148,35 @@ header {
 		}
 	}
 }
+
+@media screen and (max-width: $mobile) {
+	header {
+		height: 80px;
+
+		.inner {
+			h1 {
+				a {
+					svg {
+						font-size: 65px;
+						line-height: 80px;
+					}
+				}
+			}
+
+			.color {
+				right: 0;
+				left: 10px;
+
+				> div {
+					width: 15px;
+					height: 15px;
+					margin-left: 10px;
+				}
+			}
+
+			.fa-bars {
+				right: 20px;
+			}
+		}
+	}
+}

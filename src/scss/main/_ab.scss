@@ -20,6 +20,7 @@
 		left: 60%;
 		box-shadow: 2px 5px 15px #eee;
 		box-sizing: border-box;
+		transition: 0.5s;
 
 		&::after {
 			display: block;
@@ -96,6 +97,7 @@
 			height: 350px;
 			padding: 0 40px;
 			display: flex;
+			background-color: rgb(255, 255, 255, 0.7);
 			flex-direction: column;
 			justify-content: center;
 			box-shadow: none;
@@ -103,6 +105,14 @@
 			&::after {
 				width: 80px;
 				left: -80px;
+			}
+
+			h1 {
+				color: #555;
+			}
+
+			p {
+				color: #666;
 			}
 
 			.btn {
@@ -115,6 +125,35 @@
 				bottom: 10px;
 				position: absolute;
 				line-height: 30px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	#about {
+		.pic {
+			height: 500px;
+		}
+
+		.box {
+			transform: translate(-45%, -50%);
+			width: 80%;
+			height: 300px;
+			padding: 0 20px;
+
+			&::after {
+				width: 30px;
+				height: 300px;
+				left: -30px;
+			}
+
+			h1 {
+				color: #555;
+			}
+
+			p {
+				color: #666;
 			}
 		}
 	}
