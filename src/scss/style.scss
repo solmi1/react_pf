@@ -425,12 +425,12 @@ body.orange {
 						table {
 							tr {
 								input[type='submit'] {
-									background: $lightgreen;
+									background: $orange;
 
 									&:hover {
-										background-color: $lightgreen2;
-										border: 1px solid $lightgreen;
-										color: $lightgreen;
+										background-color: $orange2;
+										border: 1px solid $orange;
+										color: $orange;
 									}
 								}
 							}

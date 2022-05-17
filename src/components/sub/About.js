@@ -34,65 +34,70 @@ function About() {
 	return (
 		<>
 			<Layout name={'ABOUT'}>
-				<div className='tit'>
+				<div className='sub_tit'>
 					<h1>WE ALWAYS WORK FOR YOUR SUCCESS</h1>
 					<p>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
-						mollitia earum aut saepe asperiores consequuntur itaque soluta animi
-						rem repellendus.
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br />{' '}
+						Quisquam mollitia earum aut saepe asperiores consequuntur itaque
+						soluta animi rem repellendus.
 					</p>
 				</div>
 
 				<div className='introduction'>
-					<div className='pic'></div>
-					<div className='txt'>
-						<h2>
-							Are you planning to take your business to the next level? Let's
-							make your website ready!
-						</h2>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Distinctio dolores aliquam maiores nulla amet ducimus perferendis
-							alias vitae sequi dolorum porro magnam, expedita quis! Cum quam
-							voluptatum nostrum eveniet possimus incidunt voluptate enim quod
-							iusto?
-						</p>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Distinctio dolores aliquam maiores nulla amet ducimus perferendis
-							alias vitae sequi dolorum porro magnam, expedita quis! Cum quam
-							voluptatum nostrum eveniet possimus incidunt voluptate enim quod
-							iusto?
-						</p>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-							possimus non perspiciatis. Impedit, itaque rem!
-						</p>
+					<div className='box'>
+						<div className='pic'></div>
+						<div className='txt'>
+							<h2>
+								Are you planning to take your business to the next level? Let's
+								make your website ready!
+							</h2>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Distinctio dolores aliquam maiores nulla amet ducimus
+								perferendis alias vitae sequi dolorum porro magnam, expedita
+								quis! Cum quam voluptatum nostrum eveniet possimus incidunt
+								voluptate enim quod iusto?
+							</p>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Distinctio dolores aliquam maiores nulla amet ducimus
+								perferendis alias vitae sequi dolorum porro magnam, expedita
+								quis! Cum quam voluptatum nostrum eveniet possimus incidunt
+								voluptate enim quod iusto?
+							</p>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+								possimus non perspiciatis. Impedit, itaque rem!
+							</p>
+						</div>
 					</div>
-					<div className='pic'></div>
-					<div className='txt'>
-						<h2>
-							Are you planning to take your business to the next level? Let's
-							make your website ready!
-						</h2>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Distinctio dolores aliquam maiores nulla amet ducimus perferendis
-							alias vitae sequi dolorum porro magnam, expedita quis! Cum quam
-							voluptatum nostrum eveniet possimus incidunt voluptate enim quod
-							iusto?
-						</p>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Distinctio dolores aliquam maiores nulla amet ducimus perferendis
-							alias vitae sequi dolorum porro magnam, expedita quis! Cum quam
-							voluptatum nostrum eveniet possimus incidunt voluptate enim quod
-							iusto?
-						</p>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-							possimus non perspiciatis. Impedit, itaque rem!
-						</p>
+
+					<div className='box'>
+						<div className='pic'></div>
+						<div className='txt'>
+							<h2>
+								Are you planning to take your business to the next level? Let's
+								make your website ready!
+							</h2>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Distinctio dolores aliquam maiores nulla amet ducimus
+								perferendis alias vitae sequi dolorum porro magnam, expedita
+								quis! Cum quam voluptatum nostrum eveniet possimus incidunt
+								voluptate enim quod iusto?
+							</p>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Distinctio dolores aliquam maiores nulla amet ducimus
+								perferendis alias vitae sequi dolorum porro magnam, expedita
+								quis! Cum quam voluptatum nostrum eveniet possimus incidunt
+								voluptate enim quod iusto?
+							</p>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+								possimus non perspiciatis. Impedit, itaque rem!
+							</p>
+						</div>
 					</div>
 				</div>
 
@@ -136,8 +141,11 @@ function About() {
 				</div>
 
 				<div className='member'>
-					<h1>OUR TEAM</h1>
-					<p>The Leadership Team</p>
+					<div className='sub_tit'>
+						<h1>OUR TEAM</h1>
+						<p>The Leadership Team</p>
+					</div>
+
 					{members.map((member, idx) => {
 						return (
 							<article key={idx}>
@@ -158,8 +166,12 @@ function About() {
 										</a>
 									</div>
 								</div>
-								<h2>{member.name}</h2>
-								<p>{member.position}</p>
+
+								<div className='intro'>
+									<h2>{member.name}</h2>
+									<p>{member.position}</p>
+									<span>{member.introduce}</span>
+								</div>
 							</article>
 						);
 					})}

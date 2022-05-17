@@ -33,6 +33,10 @@
 	.inner {
 		width: 1180px;
 		margin: 150px auto;
+
+		.sub_tit {
+			margin-bottom: 80px;
+		}
 	}
 
 	.cursor {
@@ -75,11 +79,19 @@
 		.inner {
 			width: 100%;
 			margin: 100px auto;
-			padding: 0 30px;
+			padding: 0 50px;
 		}
 
 		.cursor {
 			opacity: 0;
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	.content {
+		.inner {
+			padding: 0 30px;
 		}
 	}
 }
