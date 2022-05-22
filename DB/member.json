@@ -3,16 +3,19 @@
     {
       "name": "Choi Jun",
       "position": "CEO & Web Designer",
+      "introduce": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam, perspiciatis earum! Consequuntur, quis quidem.",
       "pic": "member1.jpg"
     },
     {
       "name": "Lee Sa",
       "position": "Designer",
+      "introduce": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam, perspiciatis earum! Consequuntur, quis quidem.",
       "pic": "member2.jpg"
     },
     {
       "name": "Hanyong",
       "position": "Front-End Dev",
+      "introduce": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam, perspiciatis earum! Consequuntur, quis quidem.",
       "pic": "member3.jpg"
     }
   ]
