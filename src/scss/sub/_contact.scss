@@ -346,3 +346,302 @@
 		}
 	}
 }
+
+@media screen and (max-width: $tablet) {
+	.CONTACT {
+		.inner {
+			h1 {
+				font-size: 28px;
+			}
+
+			h2 {
+				font: 500 14px/1.2 'Montserrat';
+			}
+
+			p {
+				font: 12px/1.2 'Montserrat';
+			}
+
+			.tit {
+				margin-bottom: 100px;
+			}
+
+			.con {
+				height: 400px;
+
+				.maps {
+					.branch {
+						margin-bottom: 20px;
+
+						li {
+							width: calc(50% - 5px);
+							margin-right: 10px;
+							font-size: 14px;
+						}
+					}
+
+					#map {
+						height: calc(100% - 60px);
+					}
+				}
+
+				.formBox {
+					padding: 0 20px;
+
+					h2 {
+						font: 600 14px/1 'Montserrat';
+					}
+
+					.sns {
+						margin-bottom: 20px;
+
+						a {
+							width: 25px;
+							height: 25px;
+							margin-right: 10px;
+							line-height: 23px;
+
+							svg {
+								font-size: 14px;
+							}
+						}
+					}
+
+					form {
+						fieldset {
+							table {
+								tr {
+									&:nth-of-type(3) {
+										td {
+											height: 160px;
+										}
+									}
+
+									&:last-child {
+										height: 50px;
+									}
+
+									td {
+										height: 40px;
+
+										input {
+											height: 30px;
+											font: 500 10px/1 'Montserrat';
+										}
+
+										textarea {
+											height: 150px;
+											font: 500 10px/1 'Montserrat';
+										}
+
+										.err {
+											font: 500 8px/1 'Montserrat';
+										}
+									}
+
+									input[type='reset'],
+									input[type='submit'] {
+										height: 30px;
+										margin-right: 20px;
+									}
+
+									input[type='submit'] {
+										margin-right: 0;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.quick {
+				padding: 50px;
+
+				> p {
+					display: none;
+				}
+
+				.sub_tit {
+					h1 {
+						font-size: 35px;
+					}
+				}
+
+				.box {
+					padding: 0;
+					display: flex;
+					justify-content: space-between;
+
+					article {
+						width: 30%;
+						padding: 0;
+
+						h2 {
+							margin-bottom: 30px;
+						}
+					}
+				}
+			}
+
+			.subscribe {
+				padding: 100px 0;
+
+				.sub_tit {
+					width: 100%;
+					margin-bottom: 60px;
+
+					h1 {
+						font-size: 35px;
+					}
+				}
+
+				h2 {
+					font-weight: 600;
+				}
+
+				form {
+					fieldset {
+						table {
+							tr {
+								td {
+									height: 50px;
+
+									input {
+										height: 30px;
+										font: 500 10px/1 'Montserrat';
+									}
+
+									.err {
+										font: 500 8px/1 'Montserrat';
+									}
+								}
+
+								input[type='submit'] {
+									height: 40px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	.CONTACT {
+		.inner {
+			h1 {
+				font-size: 20px;
+			}
+
+			h2 {
+				font: 500 14px/1.2 'Montserrat';
+			}
+
+			p {
+				font: 10px/1.2 'Montserrat';
+			}
+
+			.tit {
+				margin-bottom: 40px;
+			}
+
+			.con {
+				height: 100%;
+
+				.maps {
+					width: 100%;
+					margin-bottom: 30px;
+
+					#map {
+						height: 300px;
+					}
+				}
+
+				.formBox {
+					padding: 0;
+					width: 100%;
+				}
+			}
+
+			.quick {
+				padding: 30px;
+
+				.sub_tit {
+					h1 {
+						font-size: 25px;
+					}
+				}
+
+				.box {
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+
+					article {
+						text-align: center;
+						width: 100%;
+						padding: 10px 0;
+
+						svg {
+							font-size: 24px;
+						}
+
+						h2 {
+							font-size: 12px;
+							margin-bottom: 20px;
+						}
+
+						p {
+							text-align: center;
+						}
+					}
+				}
+			}
+
+			.subscribe {
+				padding: 50px 0 0;
+
+				.sub_tit {
+					width: 100%;
+					margin-bottom: 40px;
+
+					h1 {
+						font-size: 25px;
+					}
+				}
+
+				h2 {
+					font-weight: 600;
+				}
+
+				form {
+					fieldset {
+						table {
+							tr {
+								td {
+									height: 50px;
+
+									input {
+										height: 30px;
+										font: 500 10px/1 'Montserrat';
+									}
+
+									.err {
+										font: 500 8px/1 'Montserrat';
+									}
+								}
+
+								input[type='submit'] {
+									height: 40px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
