@@ -7,7 +7,6 @@
 				display: inline-block;
 				width: 100px;
 				height: 40px;
-
 				box-shadow: 2px 5px 15px #eee;
 				margin-right: 20px;
 				margin-bottom: 40px;
@@ -16,7 +15,7 @@
 				a {
 					display: block;
 					width: 100%;
-					font: 500 16px/40px 'Montserrat';
+					font: 500 16px/40 'Montserrat';
 
 					&.on {
 						color: #fff;
@@ -37,6 +36,7 @@
 				transition: 0.5s;
 				padding: 0 10px;
 				margin-bottom: 20px;
+				font: 500 12px/1 'Montserrat';
 			}
 
 			textarea {
@@ -46,6 +46,7 @@
 				padding: 10px;
 				resize: none;
 				margin-bottom: 20px;
+				font: 500 12px/1 'Montserrat';
 			}
 
 			.btns {
@@ -74,6 +75,7 @@
 				flex-direction: row;
 				flex-wrap: wrap;
 				align-items: center;
+				justify-content: space-between;
 				border-bottom: 1px solid #ddd;
 				padding: 30px;
 
@@ -89,7 +91,7 @@
 					width: 84%;
 					h3 {
 						font: 600 15px/1.2 'Montserrat';
-						padding: 20px 0 10px;
+						padding-bottom: 10px;
 						color: #666;
 					}
 
@@ -97,7 +99,6 @@
 						font: 400 12px/1.2 'Montserrat';
 						text-align: left;
 						color: #666;
-						width: 86%;
 					}
 				}
 
@@ -127,6 +128,7 @@
 							transition: 0.5s;
 							padding: 0 10px;
 							margin-bottom: 20px;
+							font: 400 12px/1 'Montserrat';
 						}
 
 						textarea {
@@ -136,6 +138,7 @@
 							padding: 10px;
 							resize: none;
 							margin-bottom: 20px;
+							font: 400 12px/1 'Montserrat';
 						}
 					}
 
@@ -151,6 +154,116 @@
 							transition: 0.5s;
 							color: #fff;
 							cursor: pointer;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.NOTICE {
+		.inner {
+			.box {
+				padding: 30px;
+			}
+
+			#faq {
+				width: 100%;
+				margin-bottom: 50px;
+
+				article {
+					padding: 20px 0;
+
+					div {
+						width: 85%;
+
+						.btns_re {
+							button {
+								width: calc(50% - 5px);
+								margin-left: 10px;
+
+								&:first-child {
+									margin-left: 0;
+								}
+							}
+						}
+					}
+
+					h2 {
+						width: 15%;
+						font-size: 40px;
+					}
+
+					.txt {
+						width: 70%;
+						padding: 0 5px;
+
+						h3 {
+							font: 600 14px/1.2 'Montserrat';
+						}
+
+						p {
+							font: 400 12px/1.2 'Montserrat';
+						}
+					}
+
+					.btns {
+						width: 12%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	.NOTICE {
+		.inner {
+			.box {
+				padding: 25px;
+
+				.btns {
+					justify-content: space-between;
+
+					button {
+						width: calc(50% - 5px);
+						margin-right: 10px;
+						margin-left: 0;
+
+						&:last-child {
+							margin-right: 0;
+						}
+					}
+				}
+			}
+
+			#faq {
+				article {
+					h2 {
+						font-size: 25px;
+					}
+
+					.txt {
+						h3 {
+							font: 600 12px/1.2 'Montserrat';
+						}
+
+						p {
+							font: 400 10px/1.2 'Montserrat';
+						}
+					}
+
+					.btns {
+						width: 14%;
+
+						button {
+							margin-right: 10px;
+
+							svg {
+								font-size: 11px;
+							}
 						}
 					}
 				}
