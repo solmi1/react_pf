@@ -11,7 +11,7 @@ import {
 
 const Menu = forwardRef((props, ref) => {
 	const [open, setOpen] = useState(false);
-	const active = { background: '#ee7d31', color: '#fff' };
+	// const active = { background: '#ee7d31', color: '#fff' };
 
 	useImperativeHandle(ref, () => {
 		return {
@@ -46,32 +46,23 @@ const Menu = forwardRef((props, ref) => {
 								props.setOpened(!props.opened);
 							}}>
 							<li>
-								<NavLink to='/service' activeStyle={active}>
-									SERVICE
-								</NavLink>
+								<NavLink to='/service'>SERVICE</NavLink>
 							</li>
 							<li>
-								<NavLink to='/about' activeStyle={active}>
-									ABOUT
-								</NavLink>
+								<NavLink to='/about'>ABOUT</NavLink>
 							</li>
 							<li>
-								<NavLink to='/contact' activeStyle={active}>
-									CONTACT
-								</NavLink>
+								<NavLink to='/contact'>CONTACT</NavLink>
 							</li>
 							<li>
-								<NavLink to='/portfolio' activeStyle={active}>
-									PORTFOLIO
-								</NavLink>
+								<NavLink to='/portfolio'>PORTFOLIO</NavLink>
 							</li>
 							<li>
-								<NavLink to='/youtube' activeStyle={active}>
-									YOUTUBE
-								</NavLink>
+								<NavLink to='/youtube'>YOUTUBE</NavLink>
 							</li>
 							<li>
-								<NavLink to='/board' activeStyle={active}>
+								<NavLink to='/board'>
+									{/* activeStyle={active} */}
 									BOARD
 								</NavLink>
 							</li>

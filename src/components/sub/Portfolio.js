@@ -5,7 +5,12 @@ import { useSelector, useDispatch } from 'react-redux';
 import Maconry from 'react-masonry-component';
 import { useEffect, useState, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faXmark } from '@fortawesome/free-solid-svg-icons';
+import {
+	faPlus,
+	faXmark,
+	faRotateRight,
+	faMagnifyingGlass,
+} from '@fortawesome/free-solid-svg-icons';
 
 function Portfolio() {
 	const path = process.env.PUBLIC_URL;
@@ -98,6 +103,34 @@ function Portfolio() {
 								if (enableClick) searchTag();
 							}}>
 							SEARCH
+						</button>
+					</div>
+				</div>
+
+				<div className='topBtnsMo'>
+					<button
+						onClick={() => {
+							if (enableClick) initGallery();
+						}}>
+						<FontAwesomeIcon icon={faRotateRight} />
+					</button>
+
+					<div className='searchBox'>
+						<input
+							type='text'
+							ref={input}
+							onKeyUp={(e) => {
+								if (e.key === 'Enter') {
+									if (enableClick) searchTag();
+								}
+							}}
+						/>
+
+						<button
+							onClick={() => {
+								if (enableClick) searchTag();
+							}}>
+							<FontAwesomeIcon icon={faMagnifyingGlass} />
 						</button>
 					</div>
 				</div>

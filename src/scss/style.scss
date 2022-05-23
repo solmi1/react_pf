@@ -4,14 +4,17 @@ $mobile: 539px;
 $orange: #ee7d31;
 $orange2: rgba(238, 125, 49, 0.3);
 $orange3: rgba(238, 125, 49, 0.7);
+$orange4: rgba(238, 125, 49, 0.9);
 
 $lightblue: #18b4e7;
 $lightblue2: rgba(24, 180, 231, 0.3);
 $lightblue3: rgba(24, 180, 231, 0.7);
+$lightblue4: rgba(24, 180, 231, 0.9);
 
 $lightgreen: #00df70;
 $lightgreen2: rgba(0, 223, 112, 0.3);
 $lightgreen3: rgba(0, 223, 112, 0.7);
+$lightgreen4: rgba(0, 223, 112, 0.9);
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;700&display=swap');
 
@@ -82,6 +85,14 @@ body.orange {
 		.sns {
 			a {
 				color: $orange;
+			}
+		}
+	}
+
+	.popup {
+		.con {
+			span {
+				color: orange;
 			}
 		}
 	}
@@ -457,6 +468,21 @@ body.orange {
 			}
 		}
 
+		.topBtnsMo {
+			> button {
+				background: $orange;
+			}
+			.searchBox {
+				input {
+					border: 1px solid $orange;
+				}
+
+				button {
+					background: $orange;
+				}
+			}
+		}
+
 		.frame {
 			div {
 				article {
@@ -678,6 +704,14 @@ body.lightblue {
 
 		.sns {
 			a {
+				color: $lightblue;
+			}
+		}
+	}
+
+	.popup {
+		.con {
+			span {
 				color: $lightblue;
 			}
 		}
@@ -1054,6 +1088,21 @@ body.lightblue {
 			}
 		}
 
+		.topBtnsMo {
+			> button {
+				background: $lightblue;
+			}
+			.searchBox {
+				input {
+					border: 1px solid $lightblue;
+				}
+
+				button {
+					background: $lightblue;
+				}
+			}
+		}
+
 		.frame {
 			div {
 				article {
@@ -1275,6 +1324,14 @@ body.lightgreen {
 
 		.sns {
 			a {
+				color: $lightgreen;
+			}
+		}
+	}
+
+	.popup {
+		.con {
+			span {
 				color: $lightgreen;
 			}
 		}
@@ -1651,6 +1708,21 @@ body.lightgreen {
 			}
 		}
 
+		.topBtnsMo {
+			> button {
+				background: $lightgreen;
+			}
+			.searchBox {
+				input {
+					border: 1px solid $lightgreen;
+				}
+
+				button {
+					background: $lightgreen;
+				}
+			}
+		}
+
 		.frame {
 			div {
 				article {
@@ -1858,6 +1930,12 @@ body.lightgreen {
 				}
 			}
 		}
+
+		.content {
+			.sub_visual {
+				background: $orange4;
+			}
+		}
 	}
 
 	body.lightblue {
@@ -1887,6 +1965,12 @@ body.lightgreen {
 				}
 			}
 		}
+
+		.content {
+			.sub_visual {
+				background: $lightblue4;
+			}
+		}
 	}
 
 	body.lightgreen {
@@ -1914,6 +1998,12 @@ body.lightgreen {
 				.btn {
 					background: rgba(255, 255, 255, 0);
 				}
+			}
+		}
+
+		.content {
+			.sub_visual {
+				background: $lightgreen4;
 			}
 		}
 	}

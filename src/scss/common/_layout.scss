@@ -56,7 +56,6 @@
 @media screen and (max-width: $tablet) {
 	.content {
 		.sub_visual {
-			background: rgba(238, 125, 49, 0.9);
 			height: 100%;
 			padding: 0;
 
@@ -92,6 +91,7 @@
 	.content {
 		.inner {
 			padding: 0 30px;
+			margin: 50px 0;
 		}
 	}
 }
