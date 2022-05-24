@@ -98,11 +98,6 @@
 									font: 11px/1.8 'Montserrat';
 									white-space: pre-wrap;
 
-									strong {
-										font: 600 24px/1 'Montserrat';
-										letter-spacing: 2px;
-									}
-
 									&:last-child {
 										font: 500 18px/1 'Montserrat';
 										text-align: left;
@@ -229,8 +224,7 @@
 								color: #757575;
 								margin-right: 20px;
 
-								.fa-message,
-								.fa-heart {
+								svg {
 									font-size: 12px;
 									transition: 0.5s;
 								}
@@ -351,7 +345,6 @@
 					}
 
 					h2 {
-						height: 20px;
 						font: 500 15px/1.2 'Montserrat';
 						color: #757575;
 						margin-bottom: 20px;
@@ -386,6 +379,354 @@
 						}
 					}
 				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.YOUTUBE {
+		.inner {
+			.top {
+				display: flex;
+				flex-direction: column-reverse;
+
+				.left {
+					width: 100%;
+
+					article {
+						.imgbox {
+							height: 400px;
+
+							.sns {
+								height: 40px;
+								padding: 0 30px;
+
+								a {
+									line-height: 40px;
+								}
+							}
+						}
+
+						table {
+							width: 100%;
+							padding: 30px 20px;
+
+							tr {
+								td {
+									font: 10px/1.8 'Montserrat';
+									padding: 10px 20px;
+								}
+
+								&:nth-of-type(1) {
+									td {
+										font: 10px/1.8 'Montserrat';
+
+										&:last-child {
+											font: 500 14px/1 'Montserrat';
+											padding: 10px 20px;
+										}
+									}
+								}
+
+								&:last-child {
+									td {
+										font-size: 12px;
+
+										&:nth-of-type(1) {
+											width: 30%;
+										}
+										&:nth-of-type(2) {
+											width: 35%;
+										}
+										&:nth-of-type(3) {
+											width: 25%;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.right {
+					width: 100%;
+					margin-bottom: 20px;
+					float: none;
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					flex-wrap: wrap;
+					padding-left: 0;
+
+					.sec {
+						width: calc(50% - 5px);
+						padding: 20px;
+						margin-bottom: 20px;
+						margin-right: 10px;
+
+						&:nth-child(2n) {
+							margin-right: 0;
+						}
+
+						h2 {
+							font: 600 12px/1.2 'Montserrat';
+							padding: 15px 0;
+						}
+					}
+
+					.cartegories {
+						ul {
+							padding-left: 10px;
+						}
+					}
+
+					.post {
+						&:nth-child(4),
+						&:nth-child(5),
+						&:nth-child(6) {
+							display: none;
+						}
+
+						a {
+							height: 50px;
+
+							&::after {
+								width: 5%;
+								left: -5%;
+							}
+
+							img {
+								margin-right: 10px;
+							}
+
+							.txt {
+								h3 {
+									font: 400 10px/1.2 'Montserrat';
+								}
+
+								span {
+									font-size: 8px;
+									margin-right: 10px;
+
+									svg {
+										font-size: 8px;
+									}
+								}
+							}
+						}
+					}
+
+					.notice {
+						ul {
+							padding: 0 10px;
+
+							li {
+								font-size: 8px;
+
+								&:nth-child(4),
+								&:nth-child(5) {
+									display: none;
+								}
+
+								a {
+									color: #666;
+
+									h3 {
+										font: 600 10px/1.2 'Montserrat';
+									}
+								}
+							}
+						}
+					}
+
+					.gallery {
+						.imgBox {
+							img {
+								width: calc(50% - 5px);
+								height: 80px;
+
+								&:nth-child(n + 5) {
+									display: none;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.mvBox {
+				.mv {
+					flex-wrap: wrap;
+
+					article {
+						padding: 20px;
+						width: calc(50% - 10px);
+						margin-bottom: 20px;
+
+						&:nth-child(2n) {
+							margin-right: 0;
+						}
+
+						&:nth-child(n + 3) {
+							margin-bottom: 0;
+						}
+
+						.imgBox {
+							height: 120px;
+						}
+
+						h2 {
+							font: 500 12px/1.2 'Montserrat';
+						}
+
+						.txt {
+							padding: 0 10px;
+
+							p {
+								font: 400 10px/1.2 'Montserrat';
+							}
+
+							span {
+								font: 300 10px/1.2 'Montserrat';
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	.YOUTUBE {
+		.inner {
+			.top {
+				.left {
+					article {
+						margin-bottom: 20px;
+
+						.imgbox {
+							height: 150px;
+
+							.sns {
+								display: flex;
+								align-items: center;
+								flex-direction: row;
+								flex-wrap: nowrap;
+								justify-content: flex-start;
+								height: 20px;
+								padding: 0 10px;
+
+								a {
+									line-height: 0;
+									margin-right: 10px;
+
+									svg {
+										font-size: 12px;
+									}
+								}
+							}
+						}
+
+						table {
+							width: 100%;
+							padding: 20px;
+
+							tr {
+								td {
+									padding: 10px 0 15px 0;
+								}
+
+								&:nth-of-type(1) {
+									td {
+										&:first-child {
+											display: none;
+										}
+
+										&:last-child {
+											padding: 0;
+										}
+									}
+								}
+
+								&:last-child {
+									td {
+										font-size: 10px;
+										padding: 0;
+
+										&:nth-of-type(1) {
+											width: 30%;
+										}
+										&:nth-of-type(2) {
+											width: 35%;
+										}
+										&:nth-of-type(3) {
+											width: 25%;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.right {
+					width: 100%;
+					margin-bottom: 40px;
+
+					.sec {
+						width: 100%;
+						margin-bottom: 20px;
+						margin-right: 0;
+
+						&:nth-child(2n) {
+							margin-right: 0;
+						}
+					}
+
+					.cartegories {
+						ul {
+							padding-left: 10px;
+						}
+					}
+
+					.post {
+						article {
+							padding-left: 10px;
+						}
+
+						&:nth-child(3) {
+							a {
+								margin-bottom: 0;
+							}
+						}
+					}
+
+					.notice {
+						ul {
+							li {
+								&:nth-child(3) {
+									margin-bottom: 0;
+								}
+							}
+						}
+					}
+
+					.gallery {
+						.imgBox {
+							img {
+								&:nth-child(4) {
+									margin-bottom: 0;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.mvBox {
+				display: none;
 			}
 		}
 	}
